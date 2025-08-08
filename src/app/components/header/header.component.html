@@ -1,0 +1,48 @@
+
+<header class="header-container">
+    <div class="header-wrapper">
+      
+      
+      <div class="dropdown-container">
+          <button class="btn-menu" (click)="toggleDropdown()" ><span class="material-icons">menu</span></button>
+          <ul *ngIf="isOpen" class="dropdown-menu">
+            <div class="logo-dropdown">
+              <img class="ford-logo-dropdown" src="/assets/images/logoFord.png" alt="Logo Ford" />
+            </div>
+            <li>Home</li>
+            <li>Sobre</li>
+            <li>Home</li>
+            <li>Sobre</li>
+            <div class="btn-container-dropdown">
+              <button class="btn-login">
+                {{ 'HEADER.ENTRAR' | translate }}
+              </button>
+              <button class="btn-register">
+                {{ 'HEADER.CADASTRAR' | translate }}
+              </button>
+          </div>
+          </ul>
+  
+          <div>
+            <ul class="ul-services">
+              <li>{{ 'HEADER.VEICULO' | translate }}</li>
+              <li>{{ 'HEADER.SERVICOS' | translate }}</li>
+            </ul>
+          </div>
+  
+        </div>
+        
+      <div>
+        <img class="ford-logo-header" src="/assets/images/logoFord.png" alt="Logo Ford" />
+      </div>
+      <div class="btn-container">
+          <button class="btn-login">
+            {{ 'HEADER.ENTRAR' | translate }}
+          </button>
+          <button class="btn-register">
+            {{ 'HEADER.CADASTRAR' | translate }}
+          </button>
+      </div>
+    </div>
+  </header>
+  

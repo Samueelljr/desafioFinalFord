@@ -1,4 +1,11 @@
 {
     "TITLE": "Hello, world!",
-    "DESCRIPTION": "This is an Angular application with i18n support."
+    "DESCRIPTION": "This is an Angular application with i18n support.",
+
+    "HEADER": {
+      "VEICULO": "Vehicles",
+      "SERVICOS": "Services",
+      "ENTRAR": "Login",
+      "CADASTRAR": "Register"
+    }
   }
