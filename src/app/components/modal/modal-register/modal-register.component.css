@@ -8,19 +8,26 @@
     z-index: 999;
     text-align: center;
   }
+
   
   .modal {
+    display: flex;
+    flex-direction: column;
     background: #1b357e;
     padding: 20px;
     border-radius: 8px;
-    width: 320px;
+    width: 30rem;
     box-shadow: 0 12px 12px rgba(0,0,0,0.3);
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    font-weight: 500;
     background-image: url(../../../../assets/images/imgbg.png);
   }
   
   .modal input {
     display: block;
-    width: 100%;
+    width: 20rem;
     margin-bottom: 12px;
     padding: 8px;
     font-size: 16px;
@@ -47,17 +54,8 @@
     gap: 1rem;
   }
 
-  a {
-    color: #fff;
-    text-decoration: none;
-  }
-
   .modal button:hover {
     background-color: rgb(17, 21, 247);
     cursor: pointer;
     color: #fff;
-  }
-  
-  a:hover {
-    text-decoration: underline;
   }

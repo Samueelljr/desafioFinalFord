@@ -10,6 +10,24 @@
       "EMAIL": "Email",
       "SENHA": "Senha",
       "ESQUECEUSENHA": "Esqueceu a senha?"
+    },
+
+    "MODALREGISTER": {
+      "NOME": "Nome Completo",
+      "EMAIL": "Email",
+      "CONFIRMAREMAIL": "Confirme seu email",
+      "SENHA": "Senha",
+      "CONFIRMARSENHA": "Confirme sua senha",
+      "CADASTRAR": "Cadastrar",
+
+      "PLACEHOLDER": {
+        "PHNOME": "Digite seu nome",
+        "PHEMAIL": "Digite seu email",
+        "PHCONFIRMAREMAIL": "Confirme seu email",
+        "PHSENHA": "Digite sua senha",
+        "PHCONFIRMARSENHA": "Confirme sea senha"
+      }
     }
   }
+
 

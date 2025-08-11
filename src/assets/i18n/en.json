@@ -10,5 +10,22 @@
       "EMAIL": "Email",
       "SENHA": "Password",
       "ESQUECEUSENHA": "Forgot your password?"
+    },
+
+    "MODALREGISTER": {
+      "NOME": "Full Name",
+      "EMAIL": "Email",
+      "CONFIRMAREMAIL": "Confirm your email",
+      "SENHA": "Password",
+      "CONFIRMARSENHA": "Confirm your password",
+      "CADASTRAR": "Register",
+
+      "PLACEHOLDER": {
+        "PHNOME": "Enter your name",
+        "PHEMAIL": "Enter your email",
+        "PHCONFIRMAREMAIL": "Confirm your email",
+        "PHSENHA": "Enter your password",
+        "PHCONFIRMARSENHA": "Confirm your password"
+      }
     }
   }
