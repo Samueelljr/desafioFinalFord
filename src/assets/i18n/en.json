@@ -6,6 +6,8 @@
       "VEICULO": "Vehicles",
       "SERVICOS": "Services",
       "ENTRAR": "Login",
-      "CADASTRAR": "Register"
+      "CADASTRAR": "Register",
+      "EMAIL": "Email",
+      "SENHA": "Password"
     }
   }

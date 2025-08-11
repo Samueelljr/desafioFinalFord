@@ -1,0 +1,15 @@
+<div class="overlay" *ngIf="visible" (click)="close()">
+  <div class="modal" (click)="$event.stopPropagation()">
+    <img
+      src="../../../../assets/images/logoFord.png"
+      alt=""
+      class="logoModal"
+    />
+    <input placeholder="{{ 'HEADER.EMAIL' | translate }}" [(ngModel)]="email" />
+    <input type="password" placeholder="{{ 'HEADER.SENHA' | translate }}" [(ngModel)]="password" />
+    <div class="btn-container">
+      <button (click)="login()">{{ 'HEADER.ENTRAR' | translate }}</button>
+      <button (click)="close()">{{ 'HEADER.CADASTRAR' | translate }}</button>
+    </div>
+  </div>
+</div>
