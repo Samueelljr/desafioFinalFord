@@ -1,0 +1,39 @@
+<div class="overlay" *ngIf="visible" (click)="close()">
+    <div class="modal" (click)="$event.stopPropagation()">
+        <form>
+            <div>
+                 <img
+                  src="../../../../assets/images/logoFord.png"
+                  alt=""
+                  class="logoModal"
+                 />
+            </div>
+
+            <div>
+                <label>{{ 'MODALREGISTER.NOME' | translate}}</label>
+                <input type="text" placeholder="{{ 'MODALREGISTER.PLACEHOLDER.PHNOME' | translate }}">
+            </div>
+            <div>
+                <label>{{ 'MODALREGISTER.EMAIL' | translate}}</label>
+                <input type="text" placeholder="{{ 'MODALREGISTER.PLACEHOLDER.PHEMAIL' | translate }}">
+            </div>
+            <div>
+                <label>{{ 'MODALREGISTER.CONFIRMAREMAIL' | translate}}</label>
+                <input type="text" placeholder="{{ 'MODALREGISTER.PLACEHOLDER.PHCONFIRMAREMAIL' | translate }}">
+            </div>
+            <div>
+                <label>{{ 'MODALREGISTER.SENHA' | translate}}</label>
+                <input type="text" placeholder="{{ 'MODALREGISTER.PLACEHOLDER.PHSENHA' | translate }}">
+            </div>
+            <div>
+                <label>{{ 'MODALREGISTER.CONFIRMARSENHA' | translate}}</label>
+                <input type="text" placeholder="{{ 'MODALREGISTER.PLACEHOLDER.PHCONFIRMARSENHA' | translate }}">
+            </div>
+
+            <div>
+                <button>{{ 'MODALREGISTER.CADASTRAR' | translate}}</button>
+            </div>
+        </form>
+    </div>
+  </div>
+  
