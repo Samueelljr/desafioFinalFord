@@ -5,11 +5,11 @@
       alt=""
       class="logoModal"
     />
-    <input placeholder="{{ 'HEADER.EMAIL' | translate }}" [(ngModel)]="email" />
+    <input type="text" placeholder="{{ 'HEADER.EMAIL' | translate }}" [(ngModel)]="email" />
     <input type="password" placeholder="{{ 'HEADER.SENHA' | translate }}" [(ngModel)]="password" />
     <div class="btn-container">
       <button (click)="login()">{{ 'HEADER.ENTRAR' | translate }}</button>
-      <button (click)="close()">{{ 'HEADER.CADASTRAR' | translate }}</button>
+      <a href="">{{ 'HEADER.ESQUECEUSENHA' | translate }}</a>
     </div>
   </div>
 </div>

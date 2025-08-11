@@ -8,6 +8,7 @@
       "ENTRAR": "Login",
       "CADASTRAR": "Register",
       "EMAIL": "Email",
-      "SENHA": "Password"
+      "SENHA": "Password",
+      "ESQUECEUSENHA": "Forgot your password?"
     }
   }
