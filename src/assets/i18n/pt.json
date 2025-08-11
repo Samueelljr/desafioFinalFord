@@ -6,7 +6,9 @@
       "VEICULO": "Veículos",
       "SERVICOS": "Serviços",
       "ENTRAR": "Entrar",
-      "CADASTRAR": "Cadastrar"
+      "CADASTRAR": "Cadastrar",
+      "EMAIL": "Email",
+      "SENHA": "Senha"
     }
   }
 

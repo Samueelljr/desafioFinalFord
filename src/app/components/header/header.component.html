@@ -36,7 +36,7 @@
         <img class="ford-logo-header" src="/assets/images/logoFord.png" alt="Logo Ford" />
       </div>
       <div class="btn-container">
-          <button class="btn-login">
+          <button class="btn-login" (click)="openLogin()">
             {{ 'HEADER.ENTRAR' | translate }}
           </button>
           <button class="btn-register">
@@ -45,4 +45,6 @@
       </div>
     </div>
   </header>
+
+  <app-modal-login></app-modal-login>
   
