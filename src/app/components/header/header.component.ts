@@ -1,5 +1,5 @@
 
-import { Component, ViewChild} from '@angular/core';
+import { Component, ViewChild, HostListener} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { ModalLoginComponent } from '../modal/modal-login/modal-login.component';
@@ -55,5 +55,17 @@ export class HeaderComponent {
   isVisible(): boolean {
     return this.innerWidth > 568; // Mostra só se for maior que 568px
   }
+
+  isScrolled = false;
+
+  @HostListener('window:scroll', [])
+    onWindowScroll() {
+      if(window.scrollY > 20) {
+        this.isScrolled = true;
+      } else {
+        this.isScrolled = false;
+      }
+    }
+  
 }
 

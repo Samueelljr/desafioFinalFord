@@ -1,7 +1,10 @@
 .header-container {
-    background-color: rgb(238, 238, 238);
-    width: 100vw;
+    background-color: rgb(238, 238, 238, 0);
+    width: 100%;
     font-weight: bold;
+    position: sticky;
+    z-index: 1;
+    transition: 0.5s ease;
 }
     
 .ford-logo-dropdown {
@@ -82,16 +85,14 @@ header li:hover {
     top: 100%;
     flex-direction: column;
     left: 0;
-    background: #fff;
-    border: 1px solid #ccc;
     border-radius: 5px;
     list-style: none;
     padding: 8px 0;
     margin: 0;
     width: 290px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
     z-index: 1000;
     gap: 2em;
+    background-color: rgb(238, 238, 238, 0);
   }
   
   .dropdown-menu li {
@@ -105,6 +106,7 @@ header li:hover {
 .btn-menu {
     border: none;
     cursor: pointer;
+    background-color: rgb(238, 238, 238, 0);
 }
 
 .logo-dropdown {
@@ -117,4 +119,20 @@ header li:hover {
     display: flex;
     justify-content: space-evenly;
 }
+
+.img-destaque-container {
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.header-container.header-scrolled {
+    background-color: #0a0909;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+
+    .btn-menu {
+        color: #fff;
+    }
+  }
   
