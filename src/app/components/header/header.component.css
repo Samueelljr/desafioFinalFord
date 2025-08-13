@@ -122,8 +122,9 @@ header li:hover {
 
 .img-destaque-container {
     width: 100%;
-    position: absolute;
-    top: 0;
+    position: relative;
+    top: -3rem;
+    height: 50rem;
 }
 
 .header-container.header-scrolled {
@@ -135,4 +136,6 @@ header li:hover {
         color: #fff;
     }
   }
+
+
   
