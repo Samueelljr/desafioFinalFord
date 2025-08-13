@@ -4,16 +4,28 @@ import { RouterOutlet } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { SlideComponent } from "./components/slide/slide.component";
 import { HeaderComponent } from "./components/header/header.component";
+import { LogoCarouselComponent } from "./components/logo-carousel/logo-carousel.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, TranslateModule, CommonModule, SlideComponent, HeaderComponent],
+  imports: [RouterOutlet, TranslateModule, CommonModule, SlideComponent, HeaderComponent, LogoCarouselComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'translate';
+
+  images = [
+    '/assets/images/ford1903.jpg',
+    '/assets/images/ford1909.jpg',
+    '/assets/images/ford1912.jpg',
+    '/assets/images/ford1917.jpg',
+    '/assets/images/ford1927.jpg',
+    '/assets/images/ford1957.jpg',
+    '/assets/images/ford1961.jpg',
+    '/assets/images/ford1976.jpg'
+  ];
 
   constructor(private translate: TranslateService) {
     translate.addLangs(['en', 'pt']);

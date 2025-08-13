@@ -1,0 +1,12 @@
+<div class="carousel">
+  <div class="track">
+    <!-- primeira sequência -->
+    <div class="slide" *ngFor="let src of slides">
+      <img [src]="src" alt="Slide" (error)="onImgError($event)" />
+    </div>
+    <!-- duplicada para dar o efeito de loop contínuo -->
+    <div class="slide" *ngFor="let src of slides">
+      <img [src]="src" alt="Slide" (error)="onImgError($event)" />
+    </div>
+  </div>
+</div>
