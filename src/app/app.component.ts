@@ -5,11 +5,12 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { SlideComponent } from "./components/slide/slide.component";
 import { HeaderComponent } from "./components/header/header.component";
 import { LogoCarouselComponent } from "./components/logo-carousel/logo-carousel.component";
+import { ExhibitionCarsComponent } from "./components/exhibition-cars/exhibition-cars.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, TranslateModule, CommonModule, SlideComponent, HeaderComponent, LogoCarouselComponent],
+  imports: [RouterOutlet, TranslateModule, CommonModule, SlideComponent, HeaderComponent, LogoCarouselComponent, ExhibitionCarsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
