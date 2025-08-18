@@ -1,0 +1,45 @@
+.section-container {
+    background-color: #121314;
+    color: #fff;
+    margin-top: 4rem;
+}
+
+.container-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 8rem;
+    padding: 2rem 0 0 0;
+}
+
+.logoFord {
+    width: 8rem;
+}
+
+.redes-sociais {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 8rem;
+}
+
+.cars-container, .compras-container,
+.tech-container, .contato-container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-height: 10rem;
+}
+
+p:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: blue;
+}
+
+.rds-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+

@@ -2,15 +2,15 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { SlideComponent } from "./components/slide/slide.component";
 import { HeaderComponent } from "./components/header/header.component";
 import { LogoCarouselComponent } from "./components/logo-carousel/logo-carousel.component";
 import { ExhibitionCarsComponent } from "./components/exhibition-cars/exhibition-cars.component";
+import { FooterComponent } from "./components/footer/footer.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, TranslateModule, CommonModule, SlideComponent, HeaderComponent, LogoCarouselComponent, ExhibitionCarsComponent],
+  imports: [RouterOutlet, TranslateModule, CommonModule, HeaderComponent, LogoCarouselComponent, ExhibitionCarsComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

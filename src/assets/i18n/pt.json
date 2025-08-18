@@ -27,6 +27,28 @@
         "PHSENHA": "Digite sua senha",
         "PHCONFIRMARSENHA": "Confirme sea senha"
       }
+    },
+    "FOOTER": {
+      "TODOSVEICULOS": "TODOS OS VEÍCULOS",
+      "CARROS": "Carros",
+      "SUVS": "SUVs",
+      "CUV": "CUV",
+      "PICKUP": "Pickup",
+      "TODOSVEICULOSMIN": "Todos os Veículos",
+      "COMPRAS": "COMPRAS",
+      "SOLUCOESFORD": "Soluções Ford",
+      "COMPROMISSODESERVICO": "Compromisso de Serviço",
+      "SERVICOSFORD": "Serviços Ford",
+      "SEGUROFORD": "Seguro Ford",
+      "TECNOLOGIA": "TECNOLOGIA",
+      "NOVOMOTOR": "Novo motor 1.5l a gasolina",
+      "SYNC": "Sync®",
+      "MOTORECO": "Motor 1.0l EcoBoost",
+      "CONTATENOS": "CONTATE-NOS",
+      "CONTATO": "Contato",
+      "APP": "Aplicativos Móveis",
+      "DOWNLOADS": "Downloads",
+      "REDESSOCIAIS": "Redes Sociais"
     }
   }
 

@@ -27,5 +27,27 @@
         "PHSENHA": "Enter your password",
         "PHCONFIRMARSENHA": "Confirm your password"
       }
-    }
+    },
+    "FOOTER": {
+  "TODOSVEICULOS": "ALL VEHICLES",
+  "CARROS": "Cars",
+  "SUVS": "SUVs",
+  "CUV": "CUV",
+  "PICKUP": "Pickup",
+  "COMPRAS": "SHOPPING",
+  "TODOSVEICULOSMIN": "All Vehicles",
+  "SOLUCOESFORD": "Ford Solutions",
+  "COMPROMISSODESERVICO": "Service Commitment",
+  "SERVICOSFORD": "Ford Services",
+  "SEGUROFORD": "Ford Insurance",
+  "TECNOLOGIA": "TECHNOLOGY",
+  "NOVOMOTOR": "New 1.5L Gasoline Engine",
+  "SYNC": "Sync®",
+  "MOTORECO": "1.0L EcoBoost Engine",
+  "CONTATENOS": "CONTACT US",
+  "CONTATO": "Contact",
+  "APP": "Mobile Apps",
+  "DOWNLOADS": "Downloads",
+  "REDESSOCIAIS": "Social Media"
+}
   }
