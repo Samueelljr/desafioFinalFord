@@ -6,11 +6,12 @@ import { HeaderComponent } from "./components/header/header.component";
 import { LogoCarouselComponent } from "./components/logo-carousel/logo-carousel.component";
 import { ExhibitionCarsComponent } from "./components/exhibition-cars/exhibition-cars.component";
 import { FooterComponent } from "./components/footer/footer.component";
+import { ContactComponent } from "./components/contact/contact.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, TranslateModule, CommonModule, HeaderComponent, LogoCarouselComponent, ExhibitionCarsComponent, FooterComponent],
+  imports: [RouterOutlet, TranslateModule, CommonModule, HeaderComponent, LogoCarouselComponent, ExhibitionCarsComponent, FooterComponent, ContactComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
