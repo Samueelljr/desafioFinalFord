@@ -62,6 +62,19 @@
       "CAMBIO": "Câmbio",
       "CARROCERIA": "Carroceria",
       "BTNFECHAR": "Fechar"
+    },
+    "CONTACT": {
+      "ENTREEMCONTATO": "Entre em Contato",
+      "NOMECOMPLETO": "Nome Completo",
+      "EMAIL": "Email",
+      "MENSAGEM": "Mensagem",
+      "MSGERRONOME": "Nome é obrigatório (mín. 3 caracteres).",
+      "MSGERROEMAIL": "Insira um email válido.",
+      "MSGERROMENSAGEM": "Mensagem deve ter pelo menos 10 caracteres.",
+      "BTNCONTACT": "Enviar",
+      "PHNAME": "Digite seu nome completo",
+      "PHEMAIL": "Digite seu email",
+      "PHMSG": "Escreva sua mensagem"
     }
   }
 

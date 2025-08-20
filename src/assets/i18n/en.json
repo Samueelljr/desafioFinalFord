@@ -62,6 +62,19 @@
   "CAMBIO": "Transmission",
   "CARROCERIA": "Body",
   "BTNFECHAR": "Close"
+}, "CONTACT": {
+  "ENTREEMCONTATO": "Contact Us",
+  "NOMECOMPLETO": "Full Name",
+  "EMAIL": "Email",
+  "MENSAGEM": "Message",
+  "MSGERRONOME": "Name is required (min. 3 characters).",
+  "MSGERROEMAIL": "Please enter a valid email.",
+  "MSGERROMENSAGEM": "Message must be at least 10 characters long.",
+  "BTNCONTACT": "Send",
+  "PHNAME": "Enter your full name",
+  "PHEMAIL": "Enter your email",
+  "PHMSG": "Write your message"
 }
+
  
 }

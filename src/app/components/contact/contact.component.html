@@ -1,0 +1,36 @@
+<div class="contact-container">
+    <h2>{{'CONTACT.ENTREEMCONTATO' | translate}}</h2>
+  
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <!-- Nome -->
+      <div class="form-group">
+        <label for="nomeCompleto">{{'CONTACT.NOMECOMPLETO' | translate}}</label>
+        <input id="nomeCompleto" type="text" formControlName="nomeCompleto" placeholder="{{ 'CONTACT.PHNAME' | translate }}" />
+        <small *ngIf="contactForm.controls.nomeCompleto.invalid && contactForm.controls.nomeCompleto.touched">
+          {{'CONTACT.MSGERRONOME' | translate}}
+        </small>
+      </div>
+  
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">{{'CONTACT.EMAIL' | translate}}</label>
+        <input id="email" type="email" formControlName="email" placeholder="{{ 'CONTACT.PHEMAIL' | translate }}" />
+        <small *ngIf="contactForm.controls.email.invalid && contactForm.controls.email.touched">
+          {{'CONTACT.MSGERROEMAIL' | translate}}
+        </small>
+      </div>
+  
+      <!-- Mensagem -->
+      <div class="form-group">
+        <label for="mensagem">{{'CONTACT.MENSAGEM' | translate}}</label>
+        <textarea id="mensagem" rows="4" formControlName="mensagem" placeholder="{{ 'CONTACT.PHMSG' | translate }}"></textarea>
+        <small *ngIf="contactForm.controls.mensagem.invalid && contactForm.controls.mensagem.touched">
+          {{'CONTACT.MSGERROMENSAGEM' | translate}}
+        </small>
+      </div>
+  
+      <!-- Botão -->
+      <button type="submit" [disabled]="contactForm.invalid">{{'CONTACT.BTNCONTACT' | translate}}</button>
+    </form>
+  </div>
+  
