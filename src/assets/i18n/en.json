@@ -49,5 +49,19 @@
   "APP": "Mobile Apps",
   "DOWNLOADS": "Downloads",
   "REDESSOCIAIS": "Social Media"
+    },
+    "EXHIBITION": {
+  "MAISPOPULARES": "Most Popular",
+  "MAISVENDIDOS": "Best Sellers",
+  "BTNDETALHES": "View Details"
+    },
+    "MODALINFORMATION": {
+  "ANO": "Year",
+  "MOTOR": "Engine",
+  "COMBUSTIVEL": "Fuel",
+  "CAMBIO": "Transmission",
+  "CARROCERIA": "Body",
+  "BTNFECHAR": "Close"
 }
-  }
+ 
+}

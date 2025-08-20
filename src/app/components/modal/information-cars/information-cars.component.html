@@ -1,0 +1,15 @@
+<div *ngIf="isOpen" class="backdrop" (click)="closeModal()">
+  <div class="modal" (click)="$event.stopPropagation()">
+    <h2>{{ car?.modelo }}</h2>
+    <p><strong>{{ 'MODALINFORMATION.ANO' | translate }}:</strong> {{ car?.ano }}</p>
+    <p><strong>{{ 'MODALINFORMATION.MOTOR' | translate }}:</strong> {{ car?.tipoMotor || 'N/D' }}</p>
+    <p><strong>{{ 'MODALINFORMATION.COMBUSTIVEL' | translate }}:</strong> {{ car?.combustivel || 'N/D' }}</p>
+    <p><strong>{{ 'MODALINFORMATION.CAMBIO' | translate }}:</strong> {{ car?.cambio || 'N/D' }}</p>
+    <p><strong>{{ 'MODALINFORMATION.CARROCERIA' | translate }}:</strong> {{ car?.carroceria || 'N/D' }}</p>
+   
+    
+    <div>
+      <button (click)="closeModal()" class="btn-information">{{ 'MODALINFORMATION.BTNFECHAR' | translate }}</button>
+    </div>
+  </div>
+</div>

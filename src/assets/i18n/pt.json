@@ -49,6 +49,19 @@
       "APP": "Aplicativos Móveis",
       "DOWNLOADS": "Downloads",
       "REDESSOCIAIS": "Redes Sociais"
+    },
+    "EXHIBITION": {
+      "MAISPOPULARES": "Mais Populares",
+      "MAISVENDIDOS": "Mais Vendidos",
+      "BTNDETALHES": "Ver detalhes"
+    },
+    "MODALINFORMATION": {
+      "ANO": "Ano",
+      "MOTOR": "Motor",
+      "COMBUSTIVEL": "Combustível",
+      "CAMBIO": "Câmbio",
+      "CARROCERIA": "Carroceria",
+      "BTNFECHAR": "Fechar"
     }
   }
 

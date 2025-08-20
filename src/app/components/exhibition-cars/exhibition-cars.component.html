@@ -1,1 +1,54 @@
+<section>
+<div>
+
+    <h2>🚀 {{ 'EXHIBITION.MAISPOPULARES' | translate}}</h2>
+    <div class="maisPopulares">
+
+        <ul  *ngFor="let carro of maisPopulares" (click)="openModal(carro)">
+            <li class="img">
+                <img src="{{carro.img}}" alt=""  class="img">
+            </li>
+            <li>
+                {{carro.modelo}}
+            </li>
+            <li>
+                {{carro.ano}}
+            </li>
+            
+            <div>
+                <button (click)="openModal(carro)" class="btn-exhibition">{{ 'EXHIBITION.BTNDETALHES' | translate}}</button>
+            </div>
+        </ul>
+    </div>
+                
+    
+    <h2>🔥 {{ 'EXHIBITION.MAISVENDIDOS' | translate}}</h2>
+    
+    <div class="maisVendidos">
+        <ul *ngFor="let carro of maisVendidos" (click)="openModal(carro)">
+            <li>
+                <img src="{{carro.img}}" alt=""  class="img">
+            </li>
+            <li >
+                {{ carro.modelo }} 
+            </li>
+            <li>
+                 {{ carro.ano }}
+            </li>
+            <div>
+                <button (click)="openModal(carro)" class="btn-exhibition">{{ 'EXHIBITION.BTNDETALHES' | translate}}</button>
+            </div>
+        </ul>
+    </div>
+    
+    <!-- Modal -->
+    <app-information-cars
+    [isOpen]="modalOpen"
+    [car]="selectCar"
+    (closed)="closedModal()">
+</app-information-cars>
+
+</div>
+</section>
+
 

@@ -1,1 +1,52 @@
+section {
+    color: #fff;
+    width: 100%;
+    margin-top: 4rem;
+}
+h2 {
+    margin-left: 4rem;
+}
 
+.maisPopulares {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 4rem 0;
+}
+.maisVendidos {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 4rem 0;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 0.5rem;
+}
+
+.img {
+    width: 380px;
+    height: 300px;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+}
+
+.btn-exhibition {
+    width: 80%;
+  height: 2rem;
+  background-color: rgb(247, 166, 17);
+  border: gray solid 2px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.btn-exhibition:hover {
+    cursor: pointer;
+   background-color:rgb(17, 21, 247);
+   color: #fff;
+}
