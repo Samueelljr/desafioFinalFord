@@ -34,14 +34,14 @@ contactForm;
       const mensagem = this.contactForm.get('mensagem')?.value;
   
       emailjs.send(
-        'SEU_SERVICE_ID',
-        'SEU_TEMPLATE_ID',
+        'service_bewgr6a',
+        'template_b5v5qf8',
         {
-          from_name: nomeCompleto,
-          from_email: email,
-          message: mensagem
+          name: nomeCompleto,
+          email: email,
+          mensagem: mensagem
         },
-        'SUA_PUBLIC_KEY'
+        'Ssp36LhMfhF_Z9pFq'
       )
       .then(() => {
         alert('Mensagem enviada com sucesso!');
