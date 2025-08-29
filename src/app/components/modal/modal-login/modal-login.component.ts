@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
+import { AuthService } from '../../../services/auth.service';
 
 
 @Component({
@@ -19,10 +20,19 @@ export class ModalLoginComponent {
   email = '';
   password = '';
 
+constructor(private authService: AuthService) {}
+
   open() { this.visible = true; }
   close() { this.visible = false; }
   login() {
-    console.log('Login:', this.email, this.password);
-    this.close();
+    this.authService.login(this.email, this.password)
+      .then(() => {
+        console.log('Login efetuado com sucesso!');
+        this.close();
+      })
+      .catch(err => {
+        console.error(' Erro ao logar:', err.message);
+      });
   }
+  
 }
