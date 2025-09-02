@@ -2,9 +2,11 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
+import { AuthService } from '../../../services/auth.service';
 
 @Component({
   selector: 'app-modal-register',
+  standalone: true,
   imports: [
     TranslateModule,
     CommonModule,
@@ -15,10 +17,35 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class ModalRegisterComponent {
   visible = false;
+  name = '';
   email = '';
+  confEmail = '';
   password = '';
+  confPassword = '';
+
+  constructor(private authService: AuthService) {}
 
   open() { this.visible = true; }
   close() { this.visible = false; }
+
+  register() {
+    if(this.email !== this.confEmail) {
+      console.log("Os emails não conferem.");
+      return
+    }
+    if(this.password !== this.confPassword) {
+      console.log("As senhas não conferem.");
+      return
+    }
+
+    this.authService.register(this.email, this.password)
+      .then(() => {
+        console.log("Registo efetuado com sucesso!");
+        this.close();
+      })
+      .catch(err => {
+        console.error("Erro ao registrar:", err.message)
+      })
+  }
  
 }

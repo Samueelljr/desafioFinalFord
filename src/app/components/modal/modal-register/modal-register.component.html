@@ -11,27 +11,27 @@
 
             <div>
                 <label>{{ 'MODALREGISTER.NOME' | translate}}</label>
-                <input type="text" placeholder="{{ 'MODALREGISTER.PLACEHOLDER.PHNOME' | translate }}">
+                <input type="text" placeholder="{{ 'MODALREGISTER.PLACEHOLDER.PHNOME' | translate }}" [(ngModel)]="name" name="name">
             </div>
             <div>
                 <label>{{ 'MODALREGISTER.EMAIL' | translate}}</label>
-                <input type="text" placeholder="{{ 'MODALREGISTER.PLACEHOLDER.PHEMAIL' | translate }}">
+                <input type="text" placeholder="{{ 'MODALREGISTER.PLACEHOLDER.PHEMAIL' | translate }}" [(ngModel)]="email" name="email">
             </div>
             <div>
                 <label>{{ 'MODALREGISTER.CONFIRMAREMAIL' | translate}}</label>
-                <input type="text" placeholder="{{ 'MODALREGISTER.PLACEHOLDER.PHCONFIRMAREMAIL' | translate }}">
+                <input type="text" placeholder="{{ 'MODALREGISTER.PLACEHOLDER.PHCONFIRMAREMAIL' | translate }}" [(ngModel)]="confEmail" name="confEmail">
             </div>
             <div>
                 <label>{{ 'MODALREGISTER.SENHA' | translate}}</label>
-                <input type="text" placeholder="{{ 'MODALREGISTER.PLACEHOLDER.PHSENHA' | translate }}">
+                <input type="text" placeholder="{{ 'MODALREGISTER.PLACEHOLDER.PHSENHA' | translate }}" [(ngModel)]="password" name="password">
             </div>
             <div>
                 <label>{{ 'MODALREGISTER.CONFIRMARSENHA' | translate}}</label>
-                <input type="text" placeholder="{{ 'MODALREGISTER.PLACEHOLDER.PHCONFIRMARSENHA' | translate }}">
+                <input type="text" placeholder="{{ 'MODALREGISTER.PLACEHOLDER.PHCONFIRMARSENHA' | translate }}" [(ngModel)]="confPassword" name="confPassword">
             </div>
 
             <div>
-                <button>{{ 'MODALREGISTER.CADASTRAR' | translate}}</button>
+                <button (click)="register()">{{ 'MODALREGISTER.CADASTRAR' | translate}}</button>
             </div>
         </form>
     </div>
