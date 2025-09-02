@@ -19,14 +19,15 @@ export class AppComponent {
   title = 'translate';
 
   images = [
-    '/assets/images/ford1903.jpg',
-    '/assets/images/ford1909.jpg',
-    '/assets/images/ford1912.jpg',
-    '/assets/images/ford1917.jpg',
-    '/assets/images/ford1927.jpg',
-    '/assets/images/ford1957.jpg',
-    '/assets/images/ford1961.jpg',
-    '/assets/images/ford1976.jpg'
+    '/assets/images/ford1903.png',
+    '/assets/images/ford1909.png',
+    '/assets/images/ford1912.png',
+    '/assets/images/ford1917.png',
+    '/assets/images/ford1927.png',
+    '/assets/images/ford1957.png',
+    '/assets/images/ford1961.png',
+    '/assets/images/ford1976.jpg',
+    '/assets/images/ford2003.png',
   ];
 
   constructor(private translate: TranslateService) {
