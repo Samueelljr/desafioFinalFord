@@ -7,6 +7,7 @@
     />
     <input type="text" placeholder="{{ 'HEADER.EMAIL' | translate }}" [(ngModel)]="email" />
     <input type="password" placeholder="{{ 'HEADER.SENHA' | translate }}" [(ngModel)]="password" />
+    <div *ngIf="msgError"><p class="msgError">{{ 'HEADER.MSGERROR' | translate }}</p></div>
     <div class="btn-container">
       <button (click)="login()">{{ 'HEADER.ENTRAR' | translate }}</button>
       <a href="">{{ 'HEADER.ESQUECEUSENHA' | translate }}</a>

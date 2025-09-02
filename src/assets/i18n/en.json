@@ -9,7 +9,8 @@
       "CADASTRAR": "Register",
       "EMAIL": "Email",
       "SENHA": "Password",
-      "ESQUECEUSENHA": "Forgot your password?"
+      "ESQUECEUSENHA": "Forgot your password?",
+      "MSGERROR": "Username or password do not match."
     },
 
     "MODALREGISTER": {
@@ -19,6 +20,8 @@
       "SENHA": "Password",
       "CONFIRMARSENHA": "Confirm your password",
       "CADASTRAR": "Register",
+      "MSGERROREMAIL": "Emails are not the same.",
+      "MSGERRORSENHA": "Passwords are not the same.",
 
       "PLACEHOLDER": {
         "PHNOME": "Enter your name",

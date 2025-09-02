@@ -16,6 +16,7 @@ import { AuthService } from '../../../services/auth.service';
   styleUrl: './modal-login.component.css'
 })
 export class ModalLoginComponent {
+  msgError = false;
   visible = false;
   email = '';
   password = '';
@@ -31,6 +32,7 @@ constructor(private authService: AuthService) {}
         this.close();
       })
       .catch(err => {
+        this.msgError = true;
         console.error(' Erro ao logar:', err.message);
       });
   }

@@ -59,3 +59,8 @@
     cursor: pointer;
     color: #fff;
   }
+
+  .msgError {
+    color: rgb(255, 61, 47);
+    font-weight: 500;
+  }

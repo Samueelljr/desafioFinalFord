@@ -62,3 +62,8 @@
   a:hover {
     text-decoration: underline;
   }
+  
+  .msgError {
+    color: rgb(255, 61, 47);
+    font-weight: 500;
+  }

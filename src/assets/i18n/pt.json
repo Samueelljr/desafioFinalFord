@@ -9,7 +9,8 @@
       "CADASTRAR": "Cadastrar",
       "EMAIL": "Email",
       "SENHA": "Senha",
-      "ESQUECEUSENHA": "Esqueceu a senha?"
+      "ESQUECEUSENHA": "Esqueceu a senha?",
+      "MSGERROR": "Usuário ou senha não conferem."
     },
 
     "MODALREGISTER": {
@@ -19,6 +20,8 @@
       "SENHA": "Senha",
       "CONFIRMARSENHA": "Confirme sua senha",
       "CADASTRAR": "Cadastrar",
+      "MSGERROREMAIL": "Emails não são iguais.",
+      "MSGERRORSENHA": "Senhas não são iguais.",
 
       "PLACEHOLDER": {
         "PHNOME": "Digite seu nome",

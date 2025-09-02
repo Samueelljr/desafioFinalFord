@@ -21,6 +21,7 @@
                 <label>{{ 'MODALREGISTER.CONFIRMAREMAIL' | translate}}</label>
                 <input type="text" placeholder="{{ 'MODALREGISTER.PLACEHOLDER.PHCONFIRMAREMAIL' | translate }}" [(ngModel)]="confEmail" name="confEmail">
             </div>
+            <div *ngIf="msgErrorEmail" class="msgError"><p>{{ 'MODALREGISTER.MSGERROREMAIL' | translate }}</p></div>
             <div>
                 <label>{{ 'MODALREGISTER.SENHA' | translate}}</label>
                 <input type="text" placeholder="{{ 'MODALREGISTER.PLACEHOLDER.PHSENHA' | translate }}" [(ngModel)]="password" name="password">
@@ -29,7 +30,7 @@
                 <label>{{ 'MODALREGISTER.CONFIRMARSENHA' | translate}}</label>
                 <input type="text" placeholder="{{ 'MODALREGISTER.PLACEHOLDER.PHCONFIRMARSENHA' | translate }}" [(ngModel)]="confPassword" name="confPassword">
             </div>
-
+            <div *ngIf="msgErrorPassword" class="msgError"><p>{{ 'MODALREGISTER.MSGERRORSENHA' | translate }}</p></div>
             <div>
                 <button (click)="register()">{{ 'MODALREGISTER.CADASTRAR' | translate}}</button>
             </div>

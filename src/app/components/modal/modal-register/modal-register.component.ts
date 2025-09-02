@@ -16,6 +16,8 @@ import { AuthService } from '../../../services/auth.service';
   styleUrl: './modal-register.component.css'
 })
 export class ModalRegisterComponent {
+  msgErrorPassword = false;
+  msgErrorEmail = false;
   visible = false;
   name = '';
   email = '';
@@ -30,10 +32,13 @@ export class ModalRegisterComponent {
 
   register() {
     if(this.email !== this.confEmail) {
+      this.msgErrorEmail = true;
       console.log("Os emails não conferem.");
       return
     }
     if(this.password !== this.confPassword) {
+      this.msgErrorEmail = false;
+      this.msgErrorPassword = true;
       console.log("As senhas não conferem.");
       return
     }
