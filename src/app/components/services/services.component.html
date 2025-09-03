@@ -1,0 +1,42 @@
+<div class="servicos-container">
+    <!-- Botão chamativo -->
+    <button class="botao-destaque" (click)="toggleLista()">
+      Solicitar Serviços
+    </button>
+  
+    <!-- Lista de serviços -->
+    <div *ngIf="abrirLista" class="lista-servicos">
+      <h2>Escolha os serviços</h2>
+      <div *ngFor="let servico of servicos">
+        <label>
+          <input type="checkbox" [(ngModel)]="servico.selecionado" />
+          {{ servico.nome }} - R$ {{ servico.valor }}
+        </label>
+      </div>
+  
+      <!-- Data -->
+      <div class="campo-data">
+        <label>Data desejada:</label>
+        <input type="date" [(ngModel)]="dataServico" />
+      </div>
+  
+      <!-- Forma de pagamento -->
+      <div class="campo-pagamento">
+        <label>Forma de pagamento:</label>
+        <select [(ngModel)]="formaPagamento">
+          <option value="Dinheiro">Dinheiro</option>
+          <option value="Cartão">Cartão</option>
+          <option value="Pix">Pix</option>
+        </select>
+      </div>
+  
+      <!-- Total -->
+      <p><strong>Total: R$ {{ total }}</strong></p>
+  
+      <!-- Finalizar -->
+      <button class="btn-finalizar" (click)="finalizarPedido()">
+        Finalizar Pedido no WhatsApp
+      </button>
+    </div>
+  </div>
+  
