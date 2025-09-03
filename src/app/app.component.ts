@@ -7,11 +7,12 @@ import { LogoCarouselComponent } from "./components/logo-carousel/logo-carousel.
 import { ExhibitionCarsComponent } from "./components/exhibition-cars/exhibition-cars.component";
 import { FooterComponent } from "./components/footer/footer.component";
 import { ContactComponent } from "./components/contact/contact.component";
+import { ServicesComponent } from "./components/services/services.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, TranslateModule, CommonModule, HeaderComponent, LogoCarouselComponent, ExhibitionCarsComponent, FooterComponent, ContactComponent],
+  imports: [RouterOutlet, TranslateModule, CommonModule, HeaderComponent, LogoCarouselComponent, ExhibitionCarsComponent, FooterComponent, ContactComponent, ServicesComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

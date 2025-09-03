@@ -1,0 +1,44 @@
+.servicos-container {
+    padding: 20px;
+    text-align: center;
+    color: antiquewhite;
+  }
+  
+  .botao-destaque {
+    background-color: #ffcc00;
+    border: 3px solid #ff6600;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    animation: piscar 1s infinite;
+  }
+  
+  @keyframes piscar {
+    0% { box-shadow: 0 0 5px #ff6600; }
+    50% { box-shadow: 0 0 20px #ff0000; }
+    100% { box-shadow: 0 0 5px #ff6600; }
+  }
+  
+  .lista-servicos {
+    margin-top: 20px;
+    text-align: left;
+    display: inline-block;
+  }
+  
+  .campo-data, .campo-pagamento {
+    margin-top: 15px;
+  }
+  
+  .btn-finalizar {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 8px;
+    background: #25d366;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
