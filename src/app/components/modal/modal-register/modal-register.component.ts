@@ -16,10 +16,10 @@ import { AuthService } from '../../../services/auth.service';
   styleUrl: './modal-register.component.css'
 })
 export class ModalRegisterComponent {
+  name = '';
   msgErrorPassword = false;
   msgErrorEmail = false;
   visible = false;
-  name = '';
   email = '';
   confEmail = '';
   password = '';
@@ -30,27 +30,19 @@ export class ModalRegisterComponent {
   open() { this.visible = true; }
   close() { this.visible = false; }
 
-  register() {
-    if(this.email !== this.confEmail) {
-      this.msgErrorEmail = true;
-      console.log("Os emails não conferem.");
-      return
-    }
-    if(this.password !== this.confPassword) {
-      this.msgErrorEmail = false;
-      this.msgErrorPassword = true;
-      console.log("As senhas não conferem.");
-      return
-    }
+  async register() {
+    // validações básicas (iguais às que você já tinha)
+    if (this.email !== this.confEmail) { this.msgErrorEmail = true; return; }
+    if (this.password !== this.confPassword) { this.msgErrorPassword = true; return; }
 
-    this.authService.register(this.email, this.password)
-      .then(() => {
-        console.log("Registo efetuado com sucesso!");
-        this.close();
-      })
-      .catch(err => {
-        console.error("Erro ao registrar:", err.message)
-      })
+    try {
+      await this.authService.registerWithName(this.name, this.email, this.password);
+      console.log('Registro efetuado com sucesso!');
+      this.close();
+    } catch (err: any) {
+      console.error('Erro ao registrar:', err?.message || err);
+    }
   }
- 
 }
+ 
+

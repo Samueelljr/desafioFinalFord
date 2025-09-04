@@ -6,6 +6,12 @@
       <div class="dropdown-container">
           <button class="btn-menu" (click)="toggleDropdown()" ><span class="material-icons">menu</span></button>
           <ul *ngIf="isOpen" class="dropdown-menu">
+            <div class="user-info" *ngIf="nomeUsuario; else naoLogado">
+              Olá, {{nomeUsuario}}
+            </div>
+            <ng-template #naoLogado>
+              <span>Bem-vindo! Faça Login. </span>
+            </ng-template>
             <div class="logo-dropdown">
               <img class="ford-logo-dropdown" src="/assets/images/logoFord.png" alt="Logo Ford" />
             </div>
@@ -29,14 +35,14 @@
               <li>{{ 'HEADER.SERVICOS' | translate }}</li>
             </ul>
           </div>
-  
         </div>
+  
         
       <div>
         <img class="ford-logo-header" src="/assets/images/logoFord.png" alt="Logo Ford" />
       </div>
       <div class="btn-container" *ngIf="isVisible()">
-          <button class="btn-login" (click)="openLogin()">
+          <button class="btn-login" (click)="openLogin()" *ngIf="isLoged">
             {{ 'HEADER.ENTRAR' | translate }}
           </button>
           <button class="btn-register" (click)="openRegister()">

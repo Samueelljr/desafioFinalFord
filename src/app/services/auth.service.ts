@@ -1,19 +1,67 @@
 import { Injectable } from '@angular/core';
-import { Auth, signInWithEmailAndPassword, createUserWithEmailAndPassword, UserCredential } from '@angular/fire/auth';
+import {
+  Auth,
+  authState,
+  User,
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+  updateProfile,
+  onAuthStateChanged,
+} from '@angular/fire/auth';
+import { Observable } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
-  constructor(private auth: Auth) {}
+  // Observable com o usuário logado (null se deslogado)
+  user$: Observable<User | null>;
 
-  login(email: string, password: string): Promise<UserCredential> {
-    return signInWithEmailAndPassword(this.auth, email, password);
+  constructor(private auth: Auth) {
+    this.user$ = authState(this.auth);
   }
 
-  register(email: string, password: string): Promise<UserCredential> {
-    return createUserWithEmailAndPassword(this.auth, email, password);
+   // Retorna o usuário atual
+   getCurrentUser(): Promise<User | null> {
+    return Promise.resolve(this.auth.currentUser);
   }
 
-  logout(): Promise<void> {
+  // Observa mudanças no login/logout
+  onAuthChange(callback: (user: User | null) => void) {
+    return onAuthStateChanged(this.auth, callback);
+  }
+
+  // LOGIN
+  async login(email: string, password: string) {
+    const cred = await signInWithEmailAndPassword(this.auth, email, password);
+    console.log("Usuário logado:", cred.user);
+    console.log("DisplayName:", cred.user.displayName);
+    return cred
+  }
+
+  // CADASTRO + definir displayName (nome)
+  async registerWithName(nome: string, email: string, password: string) {
+    const cred = await createUserWithEmailAndPassword(this.auth, email, password);
+    await updateProfile(cred.user, { displayName: nome }); // <- AQUI grava o nome
+    return cred;
+  }
+
+  // (Opcional) Atualizar nome depois (caso precise)
+  async updateDisplayName(nome: string) {
+    if (this.auth.currentUser) {
+      await updateProfile(this.auth.currentUser, { displayName: nome });
+    }
+  }
+
+  // LOGOUT
+  logout() {
     return this.auth.signOut();
+  }
+
+  // Helpers
+  get currentUser(): User | null {
+    return this.auth.currentUser;
+  }
+
+  get currentDisplayName(): string | null {
+    return this.auth.currentUser?.displayName ?? null;
   }
 }

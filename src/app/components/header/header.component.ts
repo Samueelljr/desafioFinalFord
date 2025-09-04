@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { ModalLoginComponent } from '../modal/modal-login/modal-login.component';
 import { ModalRegisterComponent } from '../modal/modal-register/modal-register.component';
+import { AuthService } from '../../services/auth.service';
+import { User } from 'firebase/auth';
 
 @Component({
   selector: 'app-header',
@@ -18,6 +20,24 @@ import { ModalRegisterComponent } from '../modal/modal-register/modal-register.c
 })
 export class HeaderComponent {
   isOpen = false;
+  nomeUsuario: string | null = null;
+  private unsubscribe: any;
+  isLoged = true;
+
+  constructor(private authService: AuthService) {}
+
+  ngOnInit() {
+    // Monitora login/logout
+    this.unsubscribe = this.authService.onAuthChange((user: User | null) => {
+      this.nomeUsuario = user?.displayName || null;
+    });
+  }
+
+  ngOnDestroy() {
+    if (this.unsubscribe) {
+      this.unsubscribe();
+    }
+  }
 
   toggleDropdown() {
     this.isOpen = !this.isOpen;
