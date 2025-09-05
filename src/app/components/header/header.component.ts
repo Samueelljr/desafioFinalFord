@@ -1,7 +1,7 @@
 
 import { Component, ViewChild, HostListener} from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { ModalLoginComponent } from '../modal/modal-login/modal-login.component';
 import { ModalRegisterComponent } from '../modal/modal-register/modal-register.component';
 import { AuthService } from '../../services/auth.service';
@@ -23,8 +23,42 @@ export class HeaderComponent {
   nomeUsuario: string | null = null;
   private unsubscribe: any;
   isLoged = true;
+  openLanguage = false;
 
-  constructor(private authService: AuthService) {}
+  selectedLanguage = 'pt';
+
+  constructor(private authService: AuthService,
+    private translateService: TranslateService
+  ) {
+
+    const savedLang = localStorage.getItem('lang');
+    if(savedLang) {
+      this.selectedLanguage = savedLang;
+    }
+    this.translateService.setFallbackLang(this.selectedLanguage);
+    this.translateService.use(this.selectedLanguage);
+  }
+
+  getSelectedFlag(): string{
+    return (
+      this.languages.find(lang => lang.code === this.selectedLanguage)?.flag ||
+      'assets/images/flags/brasil.png'
+    );
+  };
+
+  setLanguage(lang: string) {
+    this.selectedLanguage = lang;
+    localStorage.setItem('lang', lang);
+    this.translateService.use(lang);
+    this.openLanguage = false;
+  }
+
+
+  languages = [
+    { code: 'pt', name: 'Português', flag: 'assets/images/flags/brasil.png' },
+    { code: 'en', name: 'English', flag: 'assets/images/flags/eua.png' },
+    { code: 'es', name: 'Espanhol', flag: 'assets/images/flags/esp.png' }
+  ]
 
   ngOnInit() {
     // Monitora login/logout
@@ -80,7 +114,7 @@ export class HeaderComponent {
 
   @HostListener('window:scroll', [])
     onWindowScroll() {
-      if(window.scrollY > 20) {
+      if(window.scrollY > 2) {
         this.isScrolled = true;
       } else {
         this.isScrolled = false;

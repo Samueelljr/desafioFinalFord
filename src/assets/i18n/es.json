@@ -1,0 +1,83 @@
+{
+    "TITLE": "¡Hola, mundo!",
+    "DESCRIPTION": "Esta es una aplicación de Angular con soporte i18n.",
+  
+    "HEADER": {
+      "VEICULO": "Vehículos",
+      "SERVICOS": "Servicios",
+      "ENTRAR": "Iniciar sesión",
+      "CADASTRAR": "Registrarse",
+      "EMAIL": "Correo electrónico",
+      "SENHA": "Contraseña",
+      "ESQUECEUSENHA": "¿Olvidaste tu contraseña?",
+      "MSGERROR": "El nombre de usuario o la contraseña no coinciden."
+    },
+  
+    "MODALREGISTER": {
+      "NOME": "Nombre completo",
+      "EMAIL": "Correo electrónico",
+      "CONFIRMAREMAIL": "Confirma tu correo electrónico",
+      "SENHA": "Contraseña",
+      "CONFIRMARSENHA": "Confirma tu contraseña",
+      "CADASTRAR": "Registrarse",
+      "MSGERROREMAIL": "Los correos electrónicos no coinciden.",
+      "MSGERRORSENHA": "Las contraseñas no coinciden.",
+  
+      "PLACEHOLDER": {
+        "PHNOME": "Ingresa tu nombre",
+        "PHEMAIL": "Ingresa tu correo electrónico",
+        "PHCONFIRMAREMAIL": "Confirma tu correo electrónico",
+        "PHSENHA": "Ingresa tu contraseña",
+        "PHCONFIRMARSENHA": "Confirma tu contraseña"
+      }
+    },
+    "FOOTER": {
+      "TODOSVEICULOS": "TODOS LOS VEHÍCULOS",
+      "CARROS": "Coches",
+      "SUVS": "SUVs",
+      "CUV": "CUV",
+      "PICKUP": "Pickup",
+      "COMPRAS": "COMPRAS",
+      "TODOSVEICULOSMIN": "Todos los vehículos",
+      "SOLUCOESFORD": "Soluciones Ford",
+      "COMPROMISSODESERVICO": "Compromiso de servicio",
+      "SERVICOSFORD": "Servicios Ford",
+      "SEGUROFORD": "Seguro Ford",
+      "TECNOLOGIA": "TECNOLOGÍA",
+      "NOVOMOTOR": "Nuevo motor de gasolina 1.5L",
+      "SYNC": "Sync®",
+      "MOTORECO": "Motor EcoBoost 1.0L",
+      "CONTATENOS": "CONTÁCTANOS",
+      "CONTATO": "Contacto",
+      "APP": "Aplicaciones móviles",
+      "DOWNLOADS": "Descargas",
+      "REDESSOCIAIS": "Redes sociales"
+    },
+    "EXHIBITION": {
+      "MAISPOPULARES": "Más populares",
+      "MAISVENDIDOS": "Más vendidos",
+      "BTNDETALHES": "Ver detalles"
+    },
+    "MODALINFORMATION": {
+      "ANO": "Año",
+      "MOTOR": "Motor",
+      "COMBUSTIVEL": "Combustible",
+      "CAMBIO": "Transmisión",
+      "CARROCERIA": "Carrocería",
+      "BTNFECHAR": "Cerrar"
+    },
+    "CONTACT": {
+      "ENTREEMCONTATO": "Contáctanos",
+      "NOMECOMPLETO": "Nombre completo",
+      "EMAIL": "Correo electrónico",
+      "MENSAGEM": "Mensaje",
+      "MSGERRONOME": "El nombre es obligatorio (mín. 3 caracteres).",
+      "MSGERROEMAIL": "Por favor ingresa un correo electrónico válido.",
+      "MSGERROMENSAGEM": "El mensaje debe tener al menos 10 caracteres.",
+      "BTNCONTACT": "Enviar",
+      "PHNAME": "Ingresa tu nombre completo",
+      "PHEMAIL": "Ingresa tu correo electrónico",
+      "PHMSG": "Escribe tu mensaje"
+    }
+  }
+  

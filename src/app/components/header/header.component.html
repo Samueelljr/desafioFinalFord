@@ -35,6 +35,21 @@
               <li>{{ 'HEADER.SERVICOS' | translate }}</li>
             </ul>
           </div>
+          <div class="language-selector">
+            <button (click)="openLanguage = !openLanguage">
+              <img *ngIf="selectedLanguage" 
+              [src]="getSelectedFlag()" 
+              alt="flag selecionada"
+              width="30"
+              >
+            </button>
+            
+            <div class="language-dropdown" *ngIf="openLanguage">
+              <button *ngFor="let lang of languages" (click)="setLanguage(lang.code)">
+               <img [src]="lang.flag" alt="flag" width="24">
+              </button>
+            </div>
+          </div>
         </div>
   
         
