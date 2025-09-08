@@ -10,7 +10,8 @@
       "EMAIL": "Email",
       "SENHA": "Password",
       "ESQUECEUSENHA": "Forgot your password?",
-      "MSGERROR": "Username or password do not match."
+      "MSGERROR": "Username or password do not match.",
+      "SLOGAN": "More than a vehicle catalogue, a solutions center"
     },
 
     "MODALREGISTER": {

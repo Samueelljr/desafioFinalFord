@@ -186,3 +186,20 @@ header li:hover {
     color: rgb(2, 5, 197);
   }
   
+  .slogan {
+    position: absolute;
+    top: 15rem;
+    left: 6rem;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 3rem;
+    font-style: italic;
+    line-height: 5rem;
+    text-shadow: 2px 4px 10px rgba(238, 108, 2, 0.8);
+    width: 40rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }

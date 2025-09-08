@@ -10,7 +10,8 @@
       "EMAIL": "Correo electrónico",
       "SENHA": "Contraseña",
       "ESQUECEUSENHA": "¿Olvidaste tu contraseña?",
-      "MSGERROR": "El nombre de usuario o la contraseña no coinciden."
+      "MSGERROR": "El nombre de usuario o la contraseña no coinciden.",
+      "SLOGAN": "Más que un catálogo de vehículos, un centro de solucionesr"
     },
   
     "MODALREGISTER": {

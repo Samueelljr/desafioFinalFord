@@ -10,7 +10,8 @@
       "EMAIL": "Email",
       "SENHA": "Senha",
       "ESQUECEUSENHA": "Esqueceu a senha?",
-      "MSGERROR": "Usuário ou senha não conferem."
+      "MSGERROR": "Usuário ou senha não conferem.",
+      "SLOGAN": "Mais do que um catálogo de veículos, uma central de soluções"
     },
 
     "MODALREGISTER": {
