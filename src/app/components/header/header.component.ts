@@ -22,7 +22,8 @@ export class HeaderComponent {
   isOpen = false;
   nomeUsuario: string | null = null;
   private unsubscribe: any;
-  isLoged = true;
+  isLoged? = false;
+  noLoged? = false;
   openLanguage = false;
 
   selectedLanguage = 'pt';
@@ -64,6 +65,11 @@ export class HeaderComponent {
     // Monitora login/logout
     this.unsubscribe = this.authService.onAuthChange((user: User | null) => {
       this.nomeUsuario = user?.displayName || null;
+    });
+
+    this.authService.user$.subscribe(user => {
+      this.isLoged = !!user;
+      this.noLoged = !user;
     });
   }
 
@@ -121,5 +127,8 @@ export class HeaderComponent {
       }
     }
   
+    logout() {
+      this.authService.logout()
+    }
 }
 

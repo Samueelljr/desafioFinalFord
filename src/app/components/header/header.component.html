@@ -20,12 +20,17 @@
             <li>Home</li>
             <li>Sobre</li>
             <div class="btn-container-dropdown" *ngIf="innerWidth <= 568">
-              <button class="btn-login" (click)="openLogin()">
-                {{ 'HEADER.ENTRAR' | translate }}
-              </button>
-              <button class="btn-register" (click)="openRegister()">
-                {{ 'HEADER.CADASTRAR' | translate }}
-              </button>
+              <div *ngIf="noLoged; else isLoged" class="btn-container">
+                <button class="btn-login" (click)="openLogin()">
+                  {{ 'HEADER.ENTRAR' | translate }}
+                </button>
+                <button class="btn-register" (click)="openRegister()">
+                  {{ 'HEADER.CADASTRAR' | translate }}
+                </button>
+              </div>
+                <ng-template #isLoged>
+                   <p class="btn-logout" (click)="logout()">Sair</p>
+                </ng-template>
           </div>
           </ul>
   
@@ -56,13 +61,18 @@
       <div>
         <img class="ford-logo-header" src="/assets/images/logoFord.png" alt="Logo Ford" />
       </div>
-      <div class="btn-container" *ngIf="isVisible()">
-          <button class="btn-login" (click)="openLogin()" *ngIf="isLoged">
+      <div *ngIf="isVisible()">
+        <div *ngIf="noLoged; else isLoged" class="btn-container">
+          <button class="btn-login" (click)="openLogin()">
             {{ 'HEADER.ENTRAR' | translate }}
           </button>
           <button class="btn-register" (click)="openRegister()">
             {{ 'HEADER.CADASTRAR' | translate }}
           </button>
+        </div>
+          <ng-template #isLoged>
+             <p class="btn-logout" (click)="logout()">Sair</p>
+          </ng-template>
       </div>
     </div>
   </header>

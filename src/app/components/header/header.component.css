@@ -177,4 +177,12 @@ header li:hover {
   .language-dropdown button:hover {
     background: #f5f5f5;
   }
+
+  .btn-logout{
+    text-decoration: underline;
+  }
+  .btn-logout:hover{
+    cursor: pointer;
+    color: rgb(2, 5, 197);
+  }
   
