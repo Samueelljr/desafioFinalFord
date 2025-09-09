@@ -11,7 +11,8 @@
       "SENHA": "Password",
       "ESQUECEUSENHA": "Forgot your password?",
       "MSGERROR": "Username or password do not match.",
-      "SLOGAN": "More than a vehicle catalogue, a solutions center"
+      "SLOGANPT1": "More than a vehicle catalogue",
+      "SLOGANPT2": "a solutions center"
     },
 
     "MODALREGISTER": {
@@ -66,7 +67,7 @@
   "CAMBIO": "Transmission",
   "CARROCERIA": "Body",
   "BTNFECHAR": "Close"
-}, "CONTACT": {
+    }, "CONTACT": {
   "ENTREEMCONTATO": "Contact Us",
   "NOMECOMPLETO": "Full Name",
   "EMAIL": "Email",
@@ -78,7 +79,11 @@
   "PHNAME": "Enter your full name",
   "PHEMAIL": "Enter your email",
   "PHMSG": "Write your message"
+    },
+    
+    "SERVICE": {
+      "ERROSERVICE": "Select at least one service."
+    }
 }
 
  
-}

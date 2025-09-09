@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { AuthService } from '../../services/auth.service'; // ajuste o caminho
+import { TranslateModule } from '@ngx-translate/core';
 
 interface Servico {
   nome: string;
@@ -13,7 +14,7 @@ interface Servico {
 @Component({
   selector: 'app-servicos',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, TranslateModule],
   templateUrl: './services.component.html',
   styleUrl: './services.component.css'
 })
@@ -21,6 +22,7 @@ export class ServicosComponent implements OnInit, OnDestroy {
   abrirLista = false;
   dataServico = '';
   formaPagamento = 'Dinheiro';
+  errService = false;
 
   nomeCliente = 'Cliente';    // será atualizado pelo Firebase
   private sub?: Subscription; // para desinscrever
@@ -64,9 +66,9 @@ export class ServicosComponent implements OnInit, OnDestroy {
 
   finalizarPedido() {
     if (this.total === 0 || !this.dataServico) {
-      alert('Escolha pelo menos um serviço e uma data.');
-      return;
-    }
+      this.errService = true;
+      return
+    } 
 
     const servicosSelecionados = this.servicos
       .filter(s => s.selecionado)

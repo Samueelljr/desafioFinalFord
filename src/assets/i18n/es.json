@@ -11,7 +11,8 @@
       "SENHA": "Contraseña",
       "ESQUECEUSENHA": "¿Olvidaste tu contraseña?",
       "MSGERROR": "El nombre de usuario o la contraseña no coinciden.",
-      "SLOGAN": "Más que un catálogo de vehículos, un centro de solucionesr"
+      "SLOGANPT1": "Más que un catálogo de vehículos",
+      "SLOGANPT2": "un centro de solucionesr"
     },
   
     "MODALREGISTER": {
@@ -79,6 +80,10 @@
       "PHNAME": "Ingresa tu nombre completo",
       "PHEMAIL": "Ingresa tu correo electrónico",
       "PHMSG": "Escribe tu mensaje"
+    },
+    
+    "SERVICE": {
+      "ERROSERVICE": "Seleccione al menos un servicio."
     }
   }
   
