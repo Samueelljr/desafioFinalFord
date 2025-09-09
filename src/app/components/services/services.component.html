@@ -1,42 +1,67 @@
-<div class="servicos-container">
+
+<div class="service-component">
+  <div class="div-title">
+    <p>Agende seu serviço</p>
+  </div>
+  
+  <section class="option-container">
+    <div class="option-service">
+      <div class="div-img">
+        <img src="../../../assets/images/alinhamento.jpg" alt="" class="img-service">
+      </div>
+      <p>Alinhamento</p>
+    </div>
+    <div class="option-service">
+      <img src="../../../assets/images/trocaFiltro.jpg" alt="" class="img-service">
+      <p>Balanceamento</p>
+    </div>
+    <div class="option-service">
+      <img src="../../../assets/images/trocaOleo.jpg" alt="" class="img-service">
+      <p>Troca de óleo</p>
+    </div>
+  </section>
+    
+  
+  <div class="servicos-container">
     <!-- Botão chamativo -->
     <button class="botao-destaque" (click)="toggleLista()">
       Solicitar Serviços
     </button>
-  
+    
     <!-- Lista de serviços -->
     <div *ngIf="abrirLista" class="lista-servicos">
       <h2>Escolha os serviços</h2>
       <div *ngFor="let servico of servicos">
         <label>
-          <input type="checkbox" [(ngModel)]="servico.selecionado" />
+          <input type="checkbox" [(ngModel)]="servico.selecionado" required/>
           {{ servico.nome }} - R$ {{ servico.valor }}
         </label>
       </div>
-  
+      
       <!-- Data -->
       <div class="campo-data">
         <label>Data desejada:</label>
         <input type="date" [(ngModel)]="dataServico" required/>
       </div>
-  
+      
       <!-- Forma de pagamento -->
       <div class="campo-pagamento">
         <label>Forma de pagamento:</label>
-        <select [(ngModel)]="formaPagamento">
+        <select [(ngModel)]="formaPagamento" required>
           <option value="Dinheiro">Dinheiro</option>
           <option value="Cartão">Cartão</option>
           <option value="Pix">Pix</option>
         </select>
       </div>
-  
+      
       <!-- Total -->
       <p><strong>Total: R$ {{ total }}</strong></p>
-  
+      
       <!-- Finalizar -->
       <button class="btn-finalizar" (click)="finalizarPedido()">
         Finalizar Pedido no WhatsApp
       </button>
+      <p class="msgError" *ngIf="errService">{{ 'SERVICE.ERROSERVICE' | translate }}</p>
     </div>
   </div>
-  
+</div>
