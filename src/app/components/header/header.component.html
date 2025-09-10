@@ -19,8 +19,8 @@
             <li>Sobre</li>
             <li>Home</li>
             <li>Sobre</li>
-            <div class="btn-container-dropdown" *ngIf="innerWidth <= 568">
-              <div *ngIf="noLoged; else isLoged" class="btn-container">
+            <div class="btn-container-dropdown">
+              <div *ngIf="noLoged; else isLoged" class="btn-dropdown">
                 <button class="btn-login" (click)="openLogin()">
                   {{ 'HEADER.ENTRAR' | translate }}
                 </button>
@@ -61,8 +61,8 @@
       <div>
         <img class="ford-logo-header" src="/assets/images/logoFord.png" alt="Logo Ford" />
       </div>
-      <div *ngIf="isVisible()">
-        <div *ngIf="noLoged; else isLoged" class="btn-container">
+      <div class="btn-container">
+        <div *ngIf="noLoged; else isLoged" class="btn-header">
           <button class="btn-login" (click)="openLogin()">
             {{ 'HEADER.ENTRAR' | translate }}
           </button>
