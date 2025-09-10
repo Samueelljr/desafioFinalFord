@@ -112,9 +112,9 @@ export class HeaderComponent {
     })
   }
 
-  isVisible(): boolean {
-    return this.innerWidth > 568; // Mostra só se for maior que 568px
-  }
+  // isVisible(): boolean {
+  //   return this.innerWidth > 568; // Mostra só se for maior que 568px
+  // }
 
   isScrolled = false;
 

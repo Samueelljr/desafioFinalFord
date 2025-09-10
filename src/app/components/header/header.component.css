@@ -70,7 +70,12 @@ header li:hover {
   color: #000;
 }
 
-.btn-container {
+.btn-header {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-dropdown {
   display: flex;
   gap: 1rem;
 }
@@ -120,7 +125,7 @@ header li:hover {
 }
 
 .btn-container-dropdown {
-  display: flex;
+  display: none;
   justify-content: space-evenly;
 }
 
@@ -258,6 +263,14 @@ span {
   .img-destaque-container {
     top: -2rem;
     height: 24rem;
+  }
+
+  .btn-container {
+    display: none;
+  }
+
+  .btn-container-dropdown {
+    display: flex;
   }
 }
 
