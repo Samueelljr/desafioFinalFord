@@ -1,92 +1,171 @@
-.servicos-container {
-    padding: 20px;
-    text-align: center;
-    color: antiquewhite;
-    margin: 5rem 0 0 0;
-  }
-  
-  .botao-destaque {
-    background-color: #ffcc00;
-    border: 3px solid #ff6600;
-    padding: 15px 30px;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 10px;
-    cursor: pointer;
-    animation: piscar 1s infinite;
-  }
-  
-  @keyframes piscar {
-    0% { box-shadow: 0 0 5px #ff6600; }
-    50% { box-shadow: 0 0 20px #ff0000; }
-    100% { box-shadow: 0 0 5px #ff6600; }
-  }
-  
-  .lista-servicos {
-    position: relative;
-    margin-top: 20px;
-    text-align: left;
-    display: inline-block;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .campo-data, .campo-pagamento {
-    margin-top: 15px;
-  }
-  
-  .btn-finalizar {
-    margin-top: 20px;
-    padding: 12px 25px;
-    font-size: 16px;
-    border-radius: 8px;
-    background: #25d366;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
+/* ======== ESTILOS GERAIS ======== */
+.service-component {
+  background-color: rgb(8, 8, 8);
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-  .service-component {
-    background-color: rgb(8, 8, 8);
-    padding: 5rem 0 5rem 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.div-title {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 300;
+  margin: 0 0 4rem 0;
+  text-align: center;
+}
+
+.option-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas desktop */
+  gap: 5rem;
+  color: #fff;
+  background-color: rgb(8, 8, 8);
+  width: 100%;
+  max-width: 1200px;
+  justify-items: center;
+  margin-bottom: 3rem;
+}
+
+.option-service {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 2rem;
+  font-weight: 300;
+  font-size: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.option-service:hover {
+  transform: translateY(-5px);
+}
+
+.img-service {
+  width: 15rem;
+  height: 18rem;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.servicos-container {
+  padding: 20px;
+  text-align: center;
+  color: antiquewhite;
+  margin: 5rem 0 0 0;
+}
+
+.botao-destaque {
+  background-color: #ffcc00;
+  border: 3px solid #ff6600;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  animation: piscar 1s infinite;
+}
+
+@keyframes piscar {
+  0% { box-shadow: 0 0 5px #ff6600; }
+  50% { box-shadow: 0 0 20px #ff0000; }
+  100% { box-shadow: 0 0 5px #ff6600; }
+}
+
+.lista-servicos {
+  position: relative;
+  margin-top: 20px;
+  text-align: left;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+}
+
+.campo-data, .campo-pagamento {
+  margin-top: 15px;
+}
+
+.btn-finalizar {
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 8px;
+  background: #25d366;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.msgError {
+  position: absolute;
+  top: 25rem;
+  color: red;
+}
+
+/* ======== TELAS MÉDIAS (tablet) ======== */
+@media (max-width: 1024px) {
+  .div-title {
+    font-size: 2.5rem;
   }
 
   .option-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    gap: 10rem;
-    background-color: rgb(8, 8, 8);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    padding: 0 2rem;
   }
 
   .option-service {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 2rem;
-    font-weight: 300;
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
+}
 
-  .img-service {
-    width: 15rem;
-    height: 18rem;
-  }
-
+/* ======== TELAS PEQUENAS (celulares) ======== */
+@media (max-width: 768px) {
   .div-title {
-    color: #fff;
-    font-size: 3rem;
-    font-weight: 300;
-    margin: 0 0 4rem 0;
+    font-size: 2rem;
+    margin-bottom: 2rem;
   }
-  
-  .msgError {
-    position: absolute;
-    top: 25rem;
-    color: red;
+
+  .option-container {
+    grid-template-columns: 1fr; 
+    gap: 2rem;
+    padding: 0 1rem;
   }
+
+
+  .option-service {
+    font-size: 1.5rem;
+  }
+
+  .servicos-container {
+    margin-top: 3rem;
+  }
+
+  .lista-servicos {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+/* ======== TELAS EXTRA PEQUENAS (até 480px) ======== */
+@media (max-width: 480px) {
+  .div-title {
+    font-size: 1.6rem;
+  }
+
+  .option-service {
+    font-size: 1.2rem;
+    gap: 1rem;
+  }
+
+  .botao-destaque {
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+
+  .btn-finalizar {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}

@@ -100,6 +100,7 @@ header li:hover {
   width: 290px;
   z-index: 1000;
   gap: 2em;
+  color: #000;
   background-color: rgba(238, 238, 238, 0.95);
 }
 
