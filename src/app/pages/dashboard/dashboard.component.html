@@ -1,0 +1,16 @@
+<div class="dashboard">
+  <h1>📊 Dashboard de Solicitações</h1>
+
+  <div class="cards">
+    <div class="card">Total de Pedidos: <strong>{{ totalPedidos }}</strong></div>
+    <div class="card">Faturamento: <strong>R$ {{ faturamento }}</strong></div>
+    <div class="card">Último Pedido: <strong>{{ ultimoPedido }}</strong></div>
+  </div>
+
+  <h2>📌 Lista de Pedidos</h2>
+  <ul>
+    <li *ngFor="let pedido of pedidos$ | async">
+      {{ pedido.cliente }} - R$ {{ pedido.total }} ({{ pedido.formaPagamento }})
+    </li>
+  </ul>
+</div>
