@@ -2,8 +2,9 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Subscription } from 'rxjs';
-import { AuthService } from '../../services/auth.service'; // ajuste o caminho
+import { AuthService } from '../../services/auth.service'; 
 import { TranslateModule } from '@ngx-translate/core';
+import { Firestore, collection, addDoc, serverTimestamp } from '@angular/fire/firestore';
 
 interface Servico {
   nome: string;
@@ -40,7 +41,7 @@ export class ServicosComponent implements OnInit, OnDestroy {
     { nome: 'Velas de Ignição', valor: 250 },
   ];
 
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService, private firestore: Firestore) {}
 
   ngOnInit() {
     // Observa o usuário logado e atualiza o nome
@@ -64,7 +65,7 @@ export class ServicosComponent implements OnInit, OnDestroy {
     this.abrirLista = !this.abrirLista;
   }
 
-  finalizarPedido() {
+    async finalizarPedido() {
     if (this.total === 0 || !this.dataServico) {
       this.errService = true;
       return
@@ -74,6 +75,17 @@ export class ServicosComponent implements OnInit, OnDestroy {
       .filter(s => s.selecionado)
       .map(s => `${s.nome} - R$ ${s.valor.toFixed(2)}`)
       .join('\n');
+
+      const user = await this.authService.getCurrentUser();
+      await addDoc(collection(this.firestore, 'servicos'), {
+        cliente: this.nomeCliente,
+        userId: user?.uid ?? null,
+        servicos: servicosSelecionados,
+        total: this.total,
+        formaPagamento: this.formaPagamento,
+        dataServico: this.dataServico,
+        createdAt: serverTimestamp(),
+      });
 
     const mensagem =
     `Olá, meu nome é *${this.nomeCliente}*.

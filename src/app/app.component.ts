@@ -2,31 +2,20 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { HeaderComponent } from "./components/header/header.component";
-import { LogoCarouselComponent } from "./components/logo-carousel/logo-carousel.component";
-import { ExhibitionCarsComponent } from "./components/exhibition-cars/exhibition-cars.component";
-import { FooterComponent } from "./components/footer/footer.component";
-import { ContactComponent } from "./components/contact/contact.component";
-import { ServicosComponent } from "./components/services/services.component";
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet,
-     TranslateModule,
-     CommonModule, 
-     HeaderComponent, 
-     LogoCarouselComponent, 
-     ExhibitionCarsComponent, 
-     FooterComponent, 
-     ContactComponent, 
-     ServicosComponent
-    ],
+    TranslateModule,
+    CommonModule
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'translate';
+  title = 'Serviços';
 
   images = [
     '/assets/images/ford1903.png',
