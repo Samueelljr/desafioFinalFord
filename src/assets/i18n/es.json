@@ -83,7 +83,21 @@
     },
     
     "SERVICE": {
-      "ERROSERVICE": "Seleccione al menos un servicio."
-    }
+  "ERROSERVICE": "Seleccione al menos un servicio.",
+  "TITLE": "Agende su servicio",
+  "ALINHAMENTO": "Alineación",
+  "BALANCEAMENTO": "Balanceo",
+  "TROCADEOLEO": "Cambio de aceite",
+  "SOLICITARSERVICOS": "Solicitar Servicios",
+  "ESCOLHASERVICOS": "Elija los servicios",
+  "SINALDEMOEDA": "- $",
+  "DATADESEJADA": "Fecha deseada:",
+  "FORMADEPAGAMENTO": "Forma de pago:",
+  "DINHEIRO": "Efectivo",
+  "CARTAO": "Tarjeta",
+  "PIX": "Pix",
+  "TOTAL": "Total:",
+  "FINALIZARPEDIDO": "Finalizar Pedido en WhatsApp"
+}
   }
   

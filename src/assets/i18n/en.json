@@ -81,9 +81,23 @@
   "PHMSG": "Write your message"
     },
     
-    "SERVICE": {
-      "ERROSERVICE": "Select at least one service."
-    }
+   "SERVICE": {
+  "ERROSERVICE": "Select at least one service.",
+  "TITLE": "Schedule your service",
+  "ALINHAMENTO": "Alignment",
+  "BALANCEAMENTO": "Balancing",
+  "TROCADEOLEO": "Oil change",
+  "SOLICITARSERVICOS": "Request Services",
+  "ESCOLHASERVICOS": "Choose services",
+  "SINALDEMOEDA": "- $",
+  "DATADESEJADA": "Desired date:",
+  "FORMADEPAGAMENTO": "Payment method:",
+  "DINHEIRO": "Cash",
+  "CARTAO": "Card",
+  "PIX": "Pix",
+  "TOTAL": "Total:",
+  "FINALIZARPEDIDO": "Complete Order on WhatsApp"
+}
 }
 
  
