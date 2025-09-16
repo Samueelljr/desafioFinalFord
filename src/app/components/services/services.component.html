@@ -1,7 +1,7 @@
 
 <div class="service-component">
   <div class="div-title">
-    <p>Agende seu serviço</p>
+    <p>{{ 'SERVICE.TITLE' | translate }}</p>
   </div>
   
   <section class="option-container">
@@ -9,15 +9,15 @@
       <div class="div-img">
         <img src="../../../assets/images/alinhamento.jpg" alt="" class="img-service">
       </div>
-      <p>Alinhamento</p>
+      <p>{{ 'SERVICE.ALINHAMENTO' | translate }}</p>
     </div>
     <div class="option-service">
       <img src="../../../assets/images/trocaFiltro.jpg" alt="" class="img-service">
-      <p>Balanceamento</p>
+      <p>{{ 'SERVICE.BALANCEAMENTO' | translate }}</p>
     </div>
     <div class="option-service">
       <img src="../../../assets/images/trocaOleo.jpg" alt="" class="img-service">
-      <p>Troca de óleo</p>
+      <p>{{ 'SERVICE.TROCADEOLEO' | translate }}</p>
     </div>
   </section>
     
@@ -25,12 +25,12 @@
   <div class="servicos-container">
     <!-- Botão chamativo -->
     <button class="botao-destaque" (click)="toggleLista()">
-      Solicitar Serviços
+      {{ 'SERVICE.SOLICITARSERVICOS' | translate }}
     </button>
     
     <!-- Lista de serviços -->
     <div *ngIf="abrirLista" class="lista-servicos">
-      <h2>Escolha os serviços</h2>
+      <h2>{{ 'SERVICE.ESCOLHADESERVICOS' | translate }}</h2>
       <div *ngFor="let servico of servicos">
         <label>
           <input type="checkbox" [(ngModel)]="servico.selecionado" required/>
@@ -40,26 +40,26 @@
       
       <!-- Data -->
       <div class="campo-data">
-        <label>Data desejada:</label>
+        <label>{{ 'SERVICE.DATADESEJADA' | translate }}</label>
         <input type="date" [(ngModel)]="dataServico" required/>
       </div>
       
       <!-- Forma de pagamento -->
       <div class="campo-pagamento">
-        <label>Forma de pagamento:</label>
+        <label>{{ 'SERVICE.FORMADEPAGAMENTO' | translate }}</label>
         <select [(ngModel)]="formaPagamento" required>
-          <option value="Dinheiro">Dinheiro</option>
-          <option value="Cartão">Cartão</option>
-          <option value="Pix">Pix</option>
+          <option value="Dinheiro">{{ 'SERVICE.DINHEIRO' | translate }}</option>
+          <option value="Cartão">{{ 'SERVICE.CARTAO' | translate }}</option>
+          <option value="Pix">{{ 'SERVICE.PIX' | translate }}</option>
         </select>
       </div>
       
       <!-- Total -->
-      <p><strong>Total: R$ {{ total }}</strong></p>
+      <p><strong>{{ 'SERVICE.TOTAL' | translate }} R$ {{ total }}</strong></p>
       
       <!-- Finalizar -->
       <button class="btn-finalizar" (click)="finalizarPedido()">
-        Finalizar Pedido no WhatsApp
+        {{ 'SERVICE.FINALIZARPEDIDO' | translate }}
       </button>
       <p class="msgError" *ngIf="errService">{{ 'SERVICE.ERROSERVICE' | translate }}</p>
     </div>
