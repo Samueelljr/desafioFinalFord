@@ -24,17 +24,22 @@ export class ModalRegisterComponent {
   confEmail = '';
   password = '';
   confPassword = '';
+  activeTermos = false;
 
   constructor(private authService: AuthService) {}
 
   open() { this.visible = true; }
   close() { this.visible = false; }
 
+  validarEnvio(event: Event) {
+    const checkbox = event.target as HTMLInputElement;
+    this.activeTermos = checkbox.checked;
+  }
+  
   async register() {
-    // validações básicas (iguais às que você já tinha)
     if (this.email !== this.confEmail) { this.msgErrorEmail = true; return; }
     if (this.password !== this.confPassword) { this.msgErrorPassword = true; return; }
-
+    
     try {
       await this.authService.registerWithName(this.name, this.email, this.password);
       console.log('Registro efetuado com sucesso!');

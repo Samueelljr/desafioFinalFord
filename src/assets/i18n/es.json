@@ -24,6 +24,9 @@
       "CADASTRAR": "Registrarse",
       "MSGERROREMAIL": "Los correos electrónicos no coinciden.",
       "MSGERRORSENHA": "Las contraseñas no coinciden.",
+      "LGPDINFO": "Tus datos se mantendrán en nuestra base de datos solo mientras lo desees. En cualquier momento, podrás editar o eliminar esta información.",
+      "LGPDCHECKBOX1": "Sí. He leído y acepto los términos.",
+      "LGPDCHECKBOX2": "Sí. También quiero recibir descuentos y novedades.",
   
       "PLACEHOLDER": {
         "PHNOME": "Ingresa tu nombre",

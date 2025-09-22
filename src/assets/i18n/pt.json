@@ -1,6 +1,4 @@
 {
-    "TITLE": "Olá, mundo!",
-    "DESCRIPTION": "Esta é uma aplicação Angular com suporte a i18n.",
 
     "HEADER": {
       "VEICULO": "Veículos",
@@ -24,6 +22,9 @@
       "CADASTRAR": "Cadastrar",
       "MSGERROREMAIL": "Emails não são iguais.",
       "MSGERRORSENHA": "Senhas não são iguais.",
+      "LGPDINFO": "Os dados serão mantidos em nossa base de dados, só enquanto for desejado por você qualquer momento, será possível editar ou remover tais dados.",
+      "LGPDCHECKBOX1": "Sim. Li e concordo com os termos.",
+      "LGPDCHECKBOX2": "Sim. Também quero receber descontos e novidades.",
 
       "PLACEHOLDER": {
         "PHNOME": "Digite seu nome",

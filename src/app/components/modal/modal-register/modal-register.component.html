@@ -31,8 +31,19 @@
                 <input type="text" placeholder="{{ 'MODALREGISTER.PLACEHOLDER.PHCONFIRMARSENHA' | translate }}" [(ngModel)]="confPassword" name="confPassword">
             </div>
             <div *ngIf="msgErrorPassword" class="msgError"><p>{{ 'MODALREGISTER.MSGERRORSENHA' | translate }}</p></div>
+            <div class="lgpd-checkbox">
+                <p>{{ 'MODALREGISTER.LGPDINFO' | translate }}</p>
+                    <div class="checkbox-group">
+                        <input type="checkbox" (change)="validarEnvio($event)">
+                        <label for="termosCheckbox"  >{{ 'MODALREGISTER.LGPDCHECKBOX1' | translate }}<a href="https://www.ford.com.br/politica-de-privacidade/"></a></label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="newsletterCheckbox" >
+                        <label for="newsletterCheckbox">{{ 'MODALREGISTER.LGPDCHECKBOX2' | translate }}.</label>
+                    </div>
+            </div>
             <div>
-                <button (click)="register()">{{ 'MODALREGISTER.CADASTRAR' | translate}}</button>
+                <button id="Btn" [disabled]="!activeTermos" (click)="register()">{{ 'MODALREGISTER.CADASTRAR' | translate}}</button>
             </div>
         </form>
     </div>

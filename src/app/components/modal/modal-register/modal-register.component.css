@@ -7,6 +7,7 @@
     align-items: center;
     z-index: 999;
     text-align: center;
+    height: 100vh;
   }
 
   
@@ -19,9 +20,10 @@
     box-shadow: 0 12px 12px rgba(0,0,0,0.3);
     align-items: center;
     justify-content: center;
-    color: #000000;
+    color: #ffffff;
     font-weight: 500;
-    background-image: url(../../../../assets/images/imgbg.png);
+    font-size: large;
+    background-image: url(../../../../assets/images/imgHeader.jpeg);
   }
   
   .modal input {
@@ -63,3 +65,60 @@
     color: rgb(255, 61, 47);
     font-weight: 500;
   }
+
+  .lgpd-checkbox {
+    color: #fff;
+  }
+
+  .lgpd-checkbox {
+    margin: 3px 8px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    width: 310px;
+}
+
+.lgpd-checkbox p{
+    margin: 3px 0;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #fff;
+    text-align: justify;
+}
+
+.checkbox-group{
+    margin: 3px 0;
+    display: flex;
+    align-items: flex-start;
+    width: 310px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.checkbox-group input[type="checkbox"]{
+    margin-right: 10px;
+    margin-top: 3px;
+    width: 16px;
+    height: 16px;
+}
+
+.checkbox-group label{
+    font-size: 13px;
+    line-height: 1.4;
+    color: #fff;
+    flex: 1;
+}
+
+.checkbox-group a{
+    color: #0066ff;
+    text-decoration: none;
+}
+
+.checkbox-group a:hover{
+    text-decoration: underline;
+}
+
+#Btn:disabled{
+  background-color: #cccccc;
+  cursor: not-allowed;
+}

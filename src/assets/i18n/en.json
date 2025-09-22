@@ -24,6 +24,9 @@
       "CADASTRAR": "Register",
       "MSGERROREMAIL": "Emails are not the same.",
       "MSGERRORSENHA": "Passwords are not the same.",
+      "LGPDINFO": "Your data will be kept in our database only as long as you wish. At any time, you can edit or remove this information.",
+      "LGPDCHECKBOX1": "Yes. I have read and agree to the terms.",
+      "LGPDCHECKBOX2": "Yes. I also want to receive discounts and news.",
 
       "PLACEHOLDER": {
         "PHNOME": "Enter your name",

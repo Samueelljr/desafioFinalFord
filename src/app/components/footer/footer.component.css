@@ -4,14 +4,6 @@
     margin-top: 4rem;
 }
 
-.container-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 8rem;
-    padding: 2rem 0 0 0;
-}
-
 .logoFord {
     width: 8rem;
 }
@@ -23,19 +15,6 @@
     margin: 0 8rem;
 }
 
-.cars-container, .compras-container,
-.tech-container, .contato-container{
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    min-height: 10rem;
-}
-
-p:hover {
-    cursor: pointer;
-    text-decoration: underline;
-    color: blue;
-}
 
 .rds-wrapper {
     display: flex;
@@ -43,3 +22,44 @@ p:hover {
     gap: 2rem;
 }
 
+
+
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .redes-sociais {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .rds-wrapper {
+      width: 100vw;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .rds-wrapper div img {
+      margin: 5px;
+    }
+  
+    .logoFord {
+      max-width: 90px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .rds-wrapper h4 {
+      font-size: 0.9rem;
+    }
+  
+    .rds-wrapper div img {
+      width: 24px;
+      height: 24px;
+    }
+  
+    .logoFord {
+      max-width: 70px;
+    }
+  }
+  
