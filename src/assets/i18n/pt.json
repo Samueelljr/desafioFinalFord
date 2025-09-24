@@ -10,7 +10,11 @@
       "ESQUECEUSENHA": "Esqueceu a senha?",
       "MSGERROR": "Usuário ou senha não conferem.",
       "SLOGANPT1": "Mais do que um catálogo de veículos",
-      "SLOGANPT2": "uma central de soluções"
+      "SLOGANPT2": "uma central de soluções",
+      "SAIR": "Sair",
+      "OLA": "Olá,",
+      "BEMVINDO": "Bem-vindo! Faça Login.",
+      "CONTATO": "Contato"
     },
 
     "MODALREGISTER": {

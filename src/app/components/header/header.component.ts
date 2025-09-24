@@ -86,7 +86,6 @@ export class HeaderComponent {
   @ViewChild(ModalLoginComponent, {static: false}) modal!: ModalLoginComponent;
 
   ngAfterViewInit() {
-    // Só para conferir que o ViewChild foi inicializado
     console.log('Modal:', this.modal);
   }
 
@@ -112,9 +111,12 @@ export class HeaderComponent {
     })
   }
 
-  // isVisible(): boolean {
-  //   return this.innerWidth > 568; // Mostra só se for maior que 568px
-  // }
+ scrollTo(sectionId: string) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 
   isScrolled = false;
 
@@ -130,5 +132,9 @@ export class HeaderComponent {
     logout() {
       this.authService.logout()
     }
+
+    reloadHome() {
+    window.location.reload();;
+  }
 }
 
