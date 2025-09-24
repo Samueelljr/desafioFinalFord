@@ -1,7 +1,4 @@
 {
-    "TITLE": "Hello, world!",
-    "DESCRIPTION": "This is an Angular application with i18n support.",
-
     "HEADER": {
       "VEICULO": "Vehicles",
       "SERVICOS": "Services",
@@ -12,7 +9,11 @@
       "ESQUECEUSENHA": "Forgot your password?",
       "MSGERROR": "Username or password do not match.",
       "SLOGANPT1": "More than a vehicle catalogue",
-      "SLOGANPT2": "a solutions center"
+      "SLOGANPT2": "a solutions center",
+      "SAIR": "Logout",
+      "OLA": "Hello,",
+      "BEMVINDO": "Welcome! Log in.",
+      "CONTATO": "Contact"
     },
 
     "MODALREGISTER": {

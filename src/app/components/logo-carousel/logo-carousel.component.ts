@@ -1,11 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { NgFor, NgStyle } from '@angular/common';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-logo-carousel',
   imports: [
     NgFor,
-    NgStyle
   ],
   templateUrl: './logo-carousel.component.html',
   styleUrl: './logo-carousel.component.css'

@@ -7,18 +7,18 @@
           <button class="btn-menu" (click)="toggleDropdown()" ><span class="material-icons">menu</span></button>
           <ul *ngIf="isOpen" class="dropdown-menu">
             <div class="user-info" *ngIf="nomeUsuario; else naoLogado">
-              Olá, {{nomeUsuario}}
+              {{'HEADER.OLA' | translate}} {{nomeUsuario}}
             </div>
             <ng-template #naoLogado>
-              <span>Bem-vindo! Faça Login. </span>
+              <span>{{ 'HEADER.BEMVINDO' | translate }} </span>
             </ng-template>
             <div class="logo-dropdown">
               <img class="ford-logo-dropdown" src="/assets/images/logoFord.png" alt="Logo Ford" />
             </div>
-            <li>Home</li>
-            <li>Sobre</li>
-            <li>Home</li>
-            <li>Sobre</li>
+            <li (click)="reloadHome()">Home</li>
+            <li (click)="scrollTo('exhibition-cars')">{{ 'HEADER.VEICULO' | translate }}</li>
+            <li (click)="scrollTo('services')">{{ 'HEADER.SERVICOS' | translate }}</li>
+            <li (click)="scrollTo('contact')">{{ 'HEADER.CONTATO' | translate }}</li>
             <div class="btn-container-dropdown">
               <div *ngIf="noLoged; else isLoged" class="btn-dropdown">
                 <button class="btn-login" (click)="openLogin()">
@@ -36,8 +36,8 @@
   
           <div>
             <ul class="ul-services">
-              <li>{{ 'HEADER.VEICULO' | translate }}</li>
-              <li>{{ 'HEADER.SERVICOS' | translate }}</li>
+              <li (click)="scrollTo('exhibition-cars')">{{ 'HEADER.VEICULO' | translate }}</li>
+              <li (click)="scrollTo('services')">{{ 'HEADER.SERVICOS' | translate }}</li>
             </ul>
           </div>
           <div class="language-selector">
@@ -71,7 +71,7 @@
           </button>
         </div>
           <ng-template #isLoged>
-             <p class="btn-logout" (click)="logout()">Sair</p>
+             <p class="btn-logout" (click)="logout()">{{ 'HEADER.SAIR' | translate }}</p>
           </ng-template>
       </div>
     </div>
