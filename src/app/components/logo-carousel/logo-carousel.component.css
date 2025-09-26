@@ -1,19 +1,18 @@
 .carousel {
   overflow: hidden;
   width: 100%;
-  background: #000; /* opcional */
-  margin-top: 0;
+  margin-top: -7rem;
 }
 
 .track {
   display: flex;
   white-space: nowrap;
-  animation: scroll 20s linear infinite; /* aqui está o loop */
+  animation: scroll 20s linear infinite; 
 }
 
 .slide {
   flex: 0 0 auto;
-  width: 150px; /* ajuste o tamanho do logo */
+  width: 150px; 
   height: 100px;
   display: flex;
   align-items: center;
