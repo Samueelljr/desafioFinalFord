@@ -2,12 +2,14 @@
 .header-container {
   background-color: rgba(238, 238, 238, 0);
   width: 100%;
+
   font-weight: bold;
   position: sticky;
   top: 0;
   z-index: 10;
   transition: 0.2s ease;
   position: relative;
+  /* background-image: url("../../../assets/images/imgHeader.jpeg"); */
 }
 
 .ford-logo-dropdown {
@@ -166,9 +168,12 @@ header li:hover {
 
 .language-dropdown {
   position: absolute;
-  top: 40px;
-  left: 0;
-  background: white;
+  top: 22px;
+  left: -10px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255, 255, 255);
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 0.5rem;
@@ -216,15 +221,13 @@ header li:hover {
 .slogan-container p {
   font-weight: 500;
   font-size: 2rem;
+  text-shadow: 2px 0px 0px gray;
 }
 
-.slogan-barras {
-  font-weight: 3rem;
-}
-
-span {
+span h6 {
   font-weight: 100;
   font-size: 2rem;
+  text-shadow: 2px 0px 0px gray;
 }
 
 /* -------- BREAKPOINTS -------- */

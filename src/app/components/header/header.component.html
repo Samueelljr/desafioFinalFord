@@ -51,7 +51,7 @@
             
             <div class="language-dropdown" *ngIf="openLanguage">
               <button *ngFor="let lang of languages" (click)="setLanguage(lang.code)">
-               <img [src]="lang.flag" alt="flag" width="24">
+               <img [src]="lang.flag" alt="flag" width="26">
               </button>
             </div>
           </div>
@@ -63,6 +63,7 @@
       </div>
       <div class="btn-container">
         <div *ngIf="noLoged; else isLoged" class="btn-header">
+          <div><img (click)="openLogin()" src="../../../assets/images/userIcon.svg" alt=""></div>
           <button class="btn-login" (click)="openLogin()">
             {{ 'HEADER.ENTRAR' | translate }}
           </button>
@@ -79,7 +80,7 @@
     <div class="slogan-container">
       <div>
         <p >{{ 'HEADER.SLOGANPT1' | translate }}</p>
-        <span>{{ 'HEADER.SLOGANPT2' | translate }}</span>
+        <span><h6>{{ 'HEADER.SLOGANPT2' | translate }}</h6></span>
       </div>
     </div>
   </header>

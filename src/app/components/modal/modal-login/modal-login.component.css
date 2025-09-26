@@ -14,7 +14,7 @@
     border-radius: 8px;
     width: 320px;
     box-shadow: 0 12px 12px rgba(0,0,0,0.3);
-    background-image: url(../../../../assets/images/imgHeader.jpeg);
+    background-image: url(../../../../assets/images/imgHeader2.png);
   }
   
   .modal input {
@@ -65,4 +65,13 @@
   .msgError {
     color: rgb(255, 61, 47);
     font-weight: 500;
+  }
+
+  .iconClose {
+    display: flex;
+    justify-content: end;
+  }
+
+  .iconClose:hover {
+    cursor: pointer;
   }

@@ -1,5 +1,6 @@
 <div class="overlay" *ngIf="visible" (click)="close()">
     <div class="modal" (click)="$event.stopPropagation()">
+        <div (click)="close()" class="iconClose"><img src="../../../../assets/images/iconClose.svg" alt=""></div>
         <form>
             <div>
                  <img

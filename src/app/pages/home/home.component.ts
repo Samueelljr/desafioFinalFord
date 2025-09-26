@@ -22,7 +22,16 @@ export class HomeComponent {
     '/assets/images/ford1927.png',
     '/assets/images/ford1957.png',
     '/assets/images/ford1961.png',
-    '/assets/images/ford1976.jpg',
+    '/assets/images/ford1976.png',
     '/assets/images/ford2003.png',
+    '/assets/images/ford1903.png',
+    '/assets/images/ford1909.png',
+    '/assets/images/ford1912.png',
+    '/assets/images/ford1917.png',
+    '/assets/images/ford1927.png',
+    '/assets/images/ford1957.png',
+    '/assets/images/ford1961.png',
+    '/assets/images/ford1976.png',
+    '/assets/images/ford2003.png'
   ];
 }

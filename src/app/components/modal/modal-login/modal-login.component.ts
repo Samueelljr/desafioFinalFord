@@ -1,17 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { AuthService } from '../../../services/auth.service';
 
-
 @Component({
   selector: 'app-modal-login',
-  imports: [ 
+  imports: [
     FormsModule,
     CommonModule,
-    TranslateModule
-  ],
+    TranslateModule,
+],
   templateUrl: './modal-login.component.html',
   styleUrl: './modal-login.component.css'
 })
