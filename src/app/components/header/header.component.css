@@ -230,6 +230,24 @@ span h6 {
   text-shadow: 2px 0px 0px gray;
 }
 
+.btn-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.btn-dark-mode {
+  cursor: pointer;
+  background: transparent; 
+  border: none;             
+  padding: 0;               
+  outline: none;            
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* -------- BREAKPOINTS -------- */
 
 /* 📱 Mobile pequeno (até 568px) */

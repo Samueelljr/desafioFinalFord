@@ -1,10 +1,11 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { AuthService } from '../../services/auth.service'; 
 import { TranslateModule } from '@ngx-translate/core';
 import { Firestore, collection, addDoc, serverTimestamp } from '@angular/fire/firestore';
+import { ModalLoginComponent } from '../modal/modal-login/modal-login.component';
 
 interface Servico {
   nome: string;
@@ -15,9 +16,10 @@ interface Servico {
 @Component({
   selector: 'app-servicos',
   standalone: true,
-  imports: [CommonModule, FormsModule, TranslateModule],
+  imports: [CommonModule, FormsModule, TranslateModule, ModalLoginComponent],
   templateUrl: './services.component.html',
-  styleUrl: './services.component.css'
+  styleUrl: './services.component.css',
+  encapsulation: ViewEncapsulation.None
 })
 export class ServicosComponent implements OnInit, OnDestroy {
   abrirLista = false;
@@ -41,7 +43,14 @@ export class ServicosComponent implements OnInit, OnDestroy {
     { nome: 'Velas de Ignição', valor: 250 },
   ];
 
-  constructor(private authService: AuthService, private firestore: Firestore) {}
+  constructor(private authService: AuthService, 
+    private firestore: Firestore) {}
+
+    @ViewChild(ModalLoginComponent) modalLogin!: ModalLoginComponent;
+
+    openLogin() {
+      this.modalLogin.open();
+    }
 
   ngOnInit() {
     // Observa o usuário logado e atualiza o nome
@@ -65,11 +74,17 @@ export class ServicosComponent implements OnInit, OnDestroy {
     this.abrirLista = !this.abrirLista;
   }
 
-    async finalizarPedido() {
+  async finalizarPedido() {
     if (this.total === 0 || !this.dataServico) {
       this.errService = true;
       return
     } 
+
+    const userr = await this.authService.getCurrentUser();
+  if (!userr) {
+    this.openLogin(); // abre modal e para aqui
+    return;
+  }
 
     const servicosSelecionados = this.servicos
       .filter(s => s.selecionado)

@@ -7,6 +7,7 @@ import { ModalRegisterComponent } from '../modal/modal-register/modal-register.c
 import { AuthService } from '../../services/auth.service';
 import { User } from 'firebase/auth';
 
+
 @Component({
   selector: 'app-header',
   imports: [
@@ -25,7 +26,7 @@ export class HeaderComponent {
   isLoged? = false;
   noLoged? = false;
   openLanguage = false;
-
+  isDarkMode = false;
   selectedLanguage = 'pt';
 
   constructor(private authService: AuthService,
@@ -38,6 +39,17 @@ export class HeaderComponent {
     }
     this.translateService.setFallbackLang(this.selectedLanguage);
     this.translateService.use(this.selectedLanguage);
+  }
+
+   toggleTheme() {
+    this.isDarkMode = !this.isDarkMode;
+    if (this.isDarkMode) {
+      document.body.classList.add('dark-mode');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.body.classList.remove('dark-mode');
+      localStorage.setItem('theme', 'light');
+    }
   }
 
   getSelectedFlag(): string{
@@ -71,6 +83,12 @@ export class HeaderComponent {
       this.isLoged = !!user;
       this.noLoged = !user;
     });
+    // Monitora tema atual da página
+      const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      this.isDarkMode = true;
+      document.body.classList.add('dark-mode');
+    }
   }
 
   ngOnDestroy() {

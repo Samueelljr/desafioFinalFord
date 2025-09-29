@@ -6,3 +6,25 @@
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Tema claro (já é o padrão, não precisa mudar nada) */
+
+/* Tema escuro */
+.dark-mode {
+  background-color: #41464d;
+}
+
+
+.dark-mode .btn-login,
+.dark-mode .btn-register {
+  background: #333;
+  color: #f5f5f5;
+  border: 1px solid #555;
+}
+
+.dark-mode .dropdown-menu {
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+

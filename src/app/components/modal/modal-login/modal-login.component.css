@@ -33,8 +33,9 @@
     width: 100%;
     border-radius: 10px;
     font-weight: bold;
-    background-color: rgb(247, 166, 17);
+    background-color: #1b357e;
     border: gray solid 1px;
+    color: #fff;
   }
 
   .logoModal {

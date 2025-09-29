@@ -28,7 +28,8 @@
 .btn-information {
   width: 80%;
   height: 2rem;
-  background-color: rgb(247, 166, 17);
+  background-color: #1b357e;
+  color: #fff;;
   border: gray solid 2px;
   border-radius: 5px;
   font-weight: bold;

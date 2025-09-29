@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { NgFor } from '@angular/common';
 
 @Component({
@@ -7,7 +7,8 @@ import { NgFor } from '@angular/common';
     NgFor,
   ],
   templateUrl: './logo-carousel.component.html',
-  styleUrl: './logo-carousel.component.css'
+  styleUrl: './logo-carousel.component.css',
+  encapsulation: ViewEncapsulation.None
 })
 export class LogoCarouselComponent implements OnInit { 
   @Input({ required: true }) slides: string[] = [];
