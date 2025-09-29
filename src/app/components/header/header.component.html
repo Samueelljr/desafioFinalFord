@@ -62,6 +62,13 @@
         <img class="ford-logo-header" src="/assets/images/logoFord.png" alt="Logo Ford" />
       </div>
       <div class="btn-container">
+        <div class="theme-toggle">
+  <button (click)="toggleTheme()" class="btn-dark-mode">
+    <span *ngIf="isDarkMode; else light"><img style="width: 2.5rem; height: 2rem;" src="../../../assets/images/lua-semFundo.png" alt=""></span>
+    <ng-template #light><img style="width: 2.5rem; height: 2rem;" src="../../../assets/images/sol-semFundo.png" alt=""></ng-template>
+  </button>
+</div>
+
         <div *ngIf="noLoged; else isLoged" class="btn-header">
           <div><img (click)="openLogin()" src="../../../assets/images/userIcon.svg" alt=""></div>
           <button class="btn-login" (click)="openLogin()">
