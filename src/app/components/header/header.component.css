@@ -40,7 +40,56 @@ header li:hover {
   margin: 0 2rem;
 }
 
+
 .btn-register {
+  cursor: pointer;
+  width: 6rem;
+  background: linear-gradient(135deg, #0d47a1, #1976d2); 
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.3);
+}
+
+.btn-register:hover {
+  background: linear-gradient(135deg, #1565c0, #2196f3);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(25, 118, 210, 0.45);
+}
+
+.btn-register:active {
+  transform: scale(0.97);
+}
+
+
+.btn-login {
+  cursor: pointer;
+  width: 6rem;
+  background: #ffffff;
+  color: #0d47a1; 
+  border: 2px solid #0d47a1;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+  background: rgba(13, 71, 161, 0.05);
+  transform: translateY(-2px);
+}
+
+.btn-login:active {
+  transform: scale(0.97);
+}
+
+
+/* .btn-register {
   cursor: pointer;
   background-color: rgb(77, 88, 245);
   color: #fff;
@@ -70,11 +119,12 @@ header li:hover {
 .btn-login:hover {
   background-color: #bebfc0;
   color: #000;
-}
+} */
 
 .btn-header {
   display: flex;
   gap: 1rem;
+  height: 2.6rem;
 }
 
 .btn-dropdown {

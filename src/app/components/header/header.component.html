@@ -70,7 +70,6 @@
 </div>
 
         <div *ngIf="noLoged; else isLoged" class="btn-header">
-          <div><img (click)="openLogin()" src="../../../assets/images/userIcon.svg" alt=""></div>
           <button class="btn-login" (click)="openLogin()">
             {{ 'HEADER.ENTRAR' | translate }}
           </button>
