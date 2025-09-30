@@ -40,3 +40,9 @@
     transform: translateX(-50%);
   }
 }
+
+@media screen and (max-width: 568px){
+  .carousel {
+    margin-top: -5rem;
+  }
+}

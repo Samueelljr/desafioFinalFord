@@ -136,3 +136,9 @@
   .iconClose:hover {
     cursor: pointer;
   }
+
+  .snackbar-error {
+  background-color: #e53935; 
+  color: #fff;
+  font-weight: bold;
+}
