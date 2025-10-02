@@ -1,54 +1,64 @@
 <section>
-<div class="exhibition-container">
+  <div class="exhibition-container">
 
     <h2>🚀 {{ 'EXHIBITION.MAISPOPULARES' | translate }}</h2>
     <div class="maisPopulares">
+      <div class="card" *ngFor="let carro of maisPopulares" [class.flipped]="flippedCar === carro">
 
-        <ul  *ngFor="let carro of maisPopulares" (click)="openModal(carro)">
-            <li class="img">
-                <img src="{{carro.img}}" alt=""  class="img">
-            </li>
-            <li>
-                {{carro.modelo}}
-            </li>
-            <li>
-                {{carro.ano}}
-            </li>
-            
-            <div>
-                <button (click)="openModal(carro)" class="btn-exhibition">{{ 'EXHIBITION.BTNDETALHES' | translate}}</button>
-            </div>
-        </ul>
+        <!-- Frente -->
+        <div class="card-front">
+          <img [src]="carro.img" alt="" class="img" />
+          <h3>{{ carro.modelo }}</h3>
+          <p>{{ carro.ano }}</p>
+          <button class="btn-exhibition" (click)="flipCard(carro)">
+            {{ 'EXHIBITION.BTNDETALHES' | translate }}
+          </button>
+        </div>
+
+        <!-- Verso -->
+        <div class="card-back">
+          <h3>{{ carro.modelo }}</h3>
+          <p><b>Ano:</b> {{ carro.ano }}</p>
+          <p><b>Motor:</b> {{ carro.tipoMotor }}</p>
+          <p><b>Câmbio:</b> {{ carro.cambio }}</p>
+          <p><b>Combustível:</b> {{ carro.combustivel }}</p>
+          <p><b>Carroceria:</b> {{ carro.carroceria }}</p>
+          <button class="btn-exhibition" (click)="flipCard(null)">
+            {{ 'EXHIBITION.BTNVOLTAR' | translate }}
+          </button>
+        </div>
+      </div>
     </div>
-                
-    
+
+
     <h2>🔥 {{ 'EXHIBITION.MAISVENDIDOS' | translate }}</h2>
-    
     <div class="maisVendidos">
-        <ul *ngFor="let carro of maisVendidos" (click)="openModal(carro)">
-            <li>
-                <img src="{{carro.img}}" alt=""  class="img">
-            </li>
-            <li >
-                {{ carro.modelo }} 
-            </li>
-            <li>
-                 {{ carro.ano }}
-            </li>
-            <div>
-                <button (click)="openModal(carro)" class="btn-exhibition">{{ 'EXHIBITION.BTNDETALHES' | translate}}</button>
-            </div>
-        </ul>
+      <div class="card" *ngFor="let carro of maisVendidos" [class.flipped]="flippedCar === carro">
+
+        <!-- Frente -->
+        <div class="card-front">
+          <img [src]="carro.img" alt="" class="img" />
+          <h3>{{ carro.modelo }}</h3>
+          <p>{{ carro.ano }}</p>
+          <button class="btn-exhibition" (click)="flipCard(carro)">
+            {{ 'EXHIBITION.BTNDETALHES' | translate }}
+          </button>
+        </div>
+
+        <!-- Verso -->
+        <div class="card-back">
+          <h3>{{ carro.modelo }}</h3>
+          <p><b>Ano:</b> {{ carro.ano }}</p>
+          <p><b>Motor:</b> {{ carro.tipoMotor }}</p>
+          <p><b>Câmbio:</b> {{ carro.cambio }}</p>
+          <p><b>Combustível:</b> {{ carro.combustivel }}</p>
+          <p><b>Carroceria:</b> {{ carro.carroceria }}</p>
+          <button class="btn-exhibition" (click)="flipCard(null)">
+            {{ 'EXHIBITION.BTNVOLTAR' | translate }}
+          </button>
+        </div>
+      </div>
     </div>
-    
-    <!-- Modal -->
-    <app-information-cars
-    [isOpen]="modalOpen"
-    [car]="selectCar"
-    (closed)="closedModal()">
-</app-information-cars>
 
-</div>
+  </div>
 </section>
-
-

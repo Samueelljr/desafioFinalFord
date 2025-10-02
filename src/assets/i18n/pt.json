@@ -63,7 +63,13 @@
     "EXHIBITION": {
       "MAISPOPULARES": "Mais Populares",
       "MAISVENDIDOS": "Mais Vendidos",
-      "BTNDETALHES": "Ver detalhes"
+      "BTNDETALHES": "Ver detalhes",
+      "BTNVOLTAR": "Voltar",
+      "ANO": "Ano",
+      "Motor": "Motor",
+      "Câmbio": "Câmbio",
+      "Combustível": "Combustível",
+      "Carroceria": "Carroceria"
     },
     "MODALINFORMATION": {
       "ANO": "Ano",
