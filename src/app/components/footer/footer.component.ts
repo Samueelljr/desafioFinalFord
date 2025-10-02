@@ -12,5 +12,7 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {
-
+  redirect(urlDestino: string): void {
+    window.open(urlDestino, 'blank', 'noopener, noreferrer')
+  }
 }

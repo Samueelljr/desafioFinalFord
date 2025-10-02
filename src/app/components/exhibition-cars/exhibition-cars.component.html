@@ -1,7 +1,7 @@
 <section>
-<div>
+<div class="exhibition-container">
 
-    <h2>🚀 {{ 'EXHIBITION.MAISPOPULARES' | translate}}</h2>
+    <h2>🚀 {{ 'EXHIBITION.MAISPOPULARES' | translate }}</h2>
     <div class="maisPopulares">
 
         <ul  *ngFor="let carro of maisPopulares" (click)="openModal(carro)">
@@ -22,7 +22,7 @@
     </div>
                 
     
-    <h2>🔥 {{ 'EXHIBITION.MAISVENDIDOS' | translate}}</h2>
+    <h2>🔥 {{ 'EXHIBITION.MAISVENDIDOS' | translate }}</h2>
     
     <div class="maisVendidos">
         <ul *ngFor="let carro of maisVendidos" (click)="openModal(carro)">

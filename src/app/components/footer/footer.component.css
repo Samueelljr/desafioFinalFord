@@ -22,6 +22,14 @@
     gap: 2rem;
 }
 
+.img-redesSociais {
+   cursor: pointer;
+   transition: transform 0.3 ease-in-out;
+}
+
+.img-redesSociais:hover {
+  transform: translateY(-10px);
+}
 
 
   

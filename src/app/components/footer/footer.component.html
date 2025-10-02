@@ -2,9 +2,18 @@
     <div class="redes-sociais">
         <div class="rds-wrapper">
             <div>
-                <img src="../../../assets/images/facebook.png" alt="">
-                <img src="../../../assets/images/instagram.png" alt="">
-                <img src="../../../assets/images/youtube.png" alt="">
+                <img src="../../../assets/images/facebook.png" 
+                     alt=""
+                     class="img-redesSociais"
+                     (click)="redirect('https://www.facebook.com/FordBrasil/')">
+                <img src="../../../assets/images/instagram.png" 
+                     alt="" 
+                     class="img-redesSociais"
+                     (click)="redirect('https://www.instagram.com/fordbrasil/')">
+                <img src="../../../assets/images/youtube.png" 
+                     alt=""
+                     class="img-redesSociais"
+                     (click)="redirect('https://www.youtube.com/fordbrasil')">
             </div>
         </div>
         <div>

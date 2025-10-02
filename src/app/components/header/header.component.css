@@ -89,38 +89,6 @@ header li:hover {
 }
 
 
-/* .btn-register {
-  cursor: pointer;
-  background-color: rgb(77, 88, 245);
-  color: #fff;
-  width: 8em;
-  height: 2.4em;
-  border: solid 2px rgb(167, 166, 166);
-  border-radius: 8px;
-  font-weight: bold;
-}
-
-.btn-register:hover {
-  background-color: #bebfc0;
-  color: #000;
-}
-
-.btn-login {
-  cursor: pointer;
-  background-color: rgb(242, 243, 252);
-  color: #000;
-  width: 8em;
-  height: 2.4em;
-  border: solid 2px rgb(167, 166, 166);
-  border-radius: 8px;
-  font-weight: bold;
-}
-
-.btn-login:hover {
-  background-color: #bebfc0;
-  color: #000;
-} */
-
 .btn-header {
   display: flex;
   gap: 1rem;
