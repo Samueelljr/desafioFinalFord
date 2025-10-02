@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { AuthService } from '../../../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-modal-login',
@@ -20,20 +21,31 @@ export class ModalLoginComponent {
   email = '';
   password = '';
 
-constructor(private authService: AuthService) {}
+constructor(private authService: AuthService,
+  private router: Router
+) {}
 
   open() { this.visible = true; }
   close() { this.visible = false; }
-  login() {
-    this.authService.login(this.email, this.password)
-      .then(() => {
-        console.log('Login efetuado com sucesso!');
-        this.close();
-      })
-      .catch(err => {
-        this.msgError = true;
-        console.error(' Erro ao logar:', err.message);
-      });
+login() {
+  // checagem do admin
+  if (this.email === 'admin' && this.password === 'admin') {
+    localStorage.setItem('isAdmin', 'true'); // flag simples
+    this.router.navigate(['/dashboard']); // redireciona
+    return;
   }
-  
+
+  // login normal via Firebase/AuthService
+  this.authService.login(this.email, this.password)
+    .then(() => {
+      console.log('Login efetuado com sucesso!');
+      this.close();
+    })
+    .catch(err => {
+      this.msgError = true;
+      console.error('Erro ao logar:', err.message);
+    });
 }
+
+}
+  

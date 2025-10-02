@@ -1,7 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Component} from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { InformationCarsComponent } from '../modal/information-cars/information-cars.component';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -9,9 +7,8 @@ import { TranslateModule } from '@ngx-translate/core';
   standalone: true,
   imports: [
     CommonModule,
-    InformationCarsComponent,
     TranslateModule
-  ],
+],
   templateUrl: './exhibition-cars.component.html',
   styleUrl: './exhibition-cars.component.css',
 })
@@ -48,7 +45,7 @@ export class ExhibitionCarsComponent {
      modelo: "Mustang Mach-E",
      ano: 2025,
      tipoMotor: "Elétrico – até 487 cv",
-     cambio: "N/D",
+     cambio: "100% elétrico",
      direcao: "Traseira ou integral",
      freio: "N/D",
      carroceria: "SUV elétrico",
@@ -100,7 +97,7 @@ export class ExhibitionCarsComponent {
      modelo: "Ranger Storm",
      ano: 2025,
      tipoMotor: "V6 (N/D)",
-     cambio: "N/D",
+     cambio: " Automático de 6 marchas",
      direcao: "N/D",
      freio: "N/D",
      carroceria: "Picape média off-road",
@@ -230,7 +227,7 @@ export class ExhibitionCarsComponent {
      modelo: "Maverick (Lariat FX4)",
      ano: 2025,
      tipoMotor: "2.0 turbo – ~253 cv",
-     cambio: "N/D",
+     cambio: "Automático de 8 marchas",
      direcao: "N/D",
      freio: "N/D",
      carroceria: "Picape compacta",
@@ -243,7 +240,7 @@ export class ExhibitionCarsComponent {
      modelo: "Maverick Híbrida (reestilizada)",
      ano: 2025,
      tipoMotor: "2.5 híbrido – ~194 cv",
-     cambio: "N/D",
+     cambio: "Automático de 8 marchas",
      direcao: "N/D",
      freio: "N/D",
      carroceria: "Picape compacta híbrida",
@@ -300,6 +297,13 @@ export class ExhibitionCarsComponent {
     this.modalOpen = false;
     this.selectCar = null;
   }
+
+  flippedCar: any = null;
+
+  flipCard(carro: any) {
+    this.flippedCar = this.flippedCar === carro ? null : carro;
+ }
+
 
   
 }

@@ -10,7 +10,7 @@
   <h2>📌 Lista de Pedidos</h2>
   <ul>
     <li *ngFor="let pedido of pedidos$ | async">
-      {{ pedido.cliente }} - R$ {{ pedido.total }} ({{ pedido.formaPagamento }})
+     <p> {{ pedido.cliente }}</p> <p>-</p> <p>R$ {{ pedido.total }}</p> <p>({{ pedido.formaPagamento }})</p>
     </li>
   </ul>
 </div>

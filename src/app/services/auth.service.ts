@@ -26,7 +26,7 @@ export class AuthService {
 
   // Observa mudanças no login/logout
  onAuthChange(callback: (user: User | null) => void) {
-  return this.user$.subscribe(callback);
+  return onAuthStateChanged(this.auth, callback);
 }
 
   // LOGIN

@@ -60,9 +60,10 @@
   "REDESSOCIAIS": "Social Media"
     },
     "EXHIBITION": {
-  "MAISPOPULARES": "Most Popular",
-  "MAISVENDIDOS": "Best Sellers",
-  "BTNDETALHES": "View Details"
+      "MAISPOPULARES": "Most Popular",
+      "MAISVENDIDOS": "Best Sellers",
+      "BTNDETALHES": "View Details",
+      "BTNVOLTAR": "Back"
     },
     "MODALINFORMATION": {
   "ANO": "Year",

@@ -62,7 +62,8 @@
     "EXHIBITION": {
       "MAISPOPULARES": "Más populares",
       "MAISVENDIDOS": "Más vendidos",
-      "BTNDETALHES": "Ver detalles"
+      "BTNDETALHES": "Ver detalles",
+      "BTNVOLTAR": "Volver"
     },
     "MODALINFORMATION": {
       "ANO": "Año",
