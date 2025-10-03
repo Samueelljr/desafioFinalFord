@@ -80,10 +80,10 @@ export class ModalRegisterComponent {
     console.error(msg, err);
     this.snackBar.open(msg, 'Fechar', {
       duration: 4000,
-      horizontalPosition: 'right',
-      verticalPosition: 'top',
+      horizontalPosition: 'center',
+      verticalPosition: 'bottom',
       panelClass: ['snackbar-error']
-    }) // depois você pode trocar por um snackbar/toast
+    }) 
   }
 }
 

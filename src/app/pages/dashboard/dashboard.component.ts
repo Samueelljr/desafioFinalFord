@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Firestore, collection, collectionData, Timestamp } from '@angular/fire/firestore';
 import { Observable, map } from 'rxjs';
+import { Router } from '@angular/router';
 
 interface Pedido {
   cliente: string;
@@ -23,7 +24,9 @@ export class DashboardComponent implements OnInit {
   faturamento = 0;
   ultimoPedido = '-';
 
-  constructor(private firestore: Firestore) {}
+  constructor(private firestore: Firestore,
+    private router: Router
+  ) {}
 
   ngOnInit() {
     const pedidosRef = collection(this.firestore, 'servicos');
@@ -62,5 +65,9 @@ export class DashboardComponent implements OnInit {
     }
 
     return new Date(createdAt);
+  }
+
+  returnHome() {
+    this.router.navigate(['/']);
   }
 }

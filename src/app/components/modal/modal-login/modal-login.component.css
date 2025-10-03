@@ -64,8 +64,11 @@
   }
   
   .msgError {
-    color: rgb(255, 61, 47);
-    font-weight: 500;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    position: relative;
+    top: -0.5rem;
+    text-shadow: 0 1px 5px red;
   }
 
   .iconClose {
@@ -76,3 +79,9 @@
   .iconClose:hover {
     cursor: pointer;
   }
+
+  .snackbar-error {
+  background-color: #e53935; 
+  color: #fff;
+  font-weight: bold;
+}

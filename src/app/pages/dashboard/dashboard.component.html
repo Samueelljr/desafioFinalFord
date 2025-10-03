@@ -1,6 +1,10 @@
 <div class="dashboard">
   <h1>📊 Dashboard de Solicitações</h1>
-
+  <div>
+    <button class="btn" (click)="returnHome()">
+      Sair
+    </button>
+  </div>
   <div class="cards">
     <div class="card">Total de Pedidos: <strong>{{ totalPedidos }}</strong></div>
     <div class="card">Faturamento: <strong>R$ {{ faturamento }}</strong></div>

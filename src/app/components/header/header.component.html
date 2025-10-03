@@ -21,12 +21,22 @@
             <li (click)="scrollTo('contact')">{{ 'HEADER.CONTATO' | translate }}</li>
             <div class="btn-container-dropdown">
               <div *ngIf="noLoged; else isLoged" class="btn-dropdown">
-                <button class="btn-login" (click)="openLogin()">
-                  {{ 'HEADER.ENTRAR' | translate }}
-                </button>
-                <button class="btn-register" (click)="openRegister()">
-                  {{ 'HEADER.CADASTRAR' | translate }}
-                </button>
+                <!-- TEMAS -->
+                <div class="theme-toggle">
+                    <button (click)="toggleTheme()" class="btn-dark-mode">
+                      <span *ngIf="isDarkMode; else light"><img style="width: 2.5rem; height: 2rem;" src="../../../assets/images/lua-semFundo.png" alt=""></span>
+                      <ng-template #light><img style="width: 2.5rem; height: 2rem;" src="../../../assets/images/sol-semFundo.png" alt=""></ng-template>
+                    </button>
+                </div>
+                
+                <div>
+                  <button class="btn-login" (click)="openLogin()">
+                    {{ 'HEADER.ENTRAR' | translate }}
+                  </button>
+                  <button class="btn-register" (click)="openRegister()">
+                    {{ 'HEADER.CADASTRAR' | translate }}
+                  </button>
+                </div>
               </div>
                 <ng-template #isLoged>
                    <p class="btn-logout" (click)="logout()">Sair</p>
@@ -63,6 +73,7 @@
       </div>
       <div class="btn-container">
         <div class="theme-toggle">
+          <!-- TEMAS -->
   <button (click)="toggleTheme()" class="btn-dark-mode">
     <span *ngIf="isDarkMode; else light"><img style="width: 2.5rem; height: 2rem;" src="../../../assets/images/lua-semFundo.png" alt=""></span>
     <ng-template #light><img style="width: 2.5rem; height: 2rem;" src="../../../assets/images/sol-semFundo.png" alt=""></ng-template>

@@ -66,10 +66,10 @@
       "BTNDETALHES": "Ver detalhes",
       "BTNVOLTAR": "Voltar",
       "ANO": "Ano",
-      "Motor": "Motor",
-      "Câmbio": "Câmbio",
-      "Combustível": "Combustível",
-      "Carroceria": "Carroceria"
+      "MOTOR": "Motor",
+      "CAMBIO": "Câmbio",
+      "COMBUSTIVEL": "Combustível",
+      "CARROCERIA": "Carroceria"
     },
     "MODALINFORMATION": {
       "ANO": "Ano",

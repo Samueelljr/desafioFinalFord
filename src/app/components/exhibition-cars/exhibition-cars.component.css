@@ -1,3 +1,4 @@
+/* ======== Base ======== */
 section {
   width: 100%;
   margin-top: 4rem;
@@ -7,6 +8,7 @@ h2 {
   margin-left: 4rem;
   font-size: 2rem;
   text-shadow: 2px 2px 2px rgb(105, 181, 248);
+  color: #1b357e;
 }
 
 /* GRID */
@@ -23,14 +25,14 @@ h2 {
   width: 100%;
   max-width: 320px;
   height: 420px;
-  perspective: 1000px; /* efeito 3D */
+  perspective: 1000px;
+  position: relative; 
 }
 
 .card-front,
 .card-back {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  inset: 0; 
   border-radius: 12px;
   padding: 1rem;
   backface-visibility: hidden;
@@ -41,7 +43,6 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .card-front {
@@ -50,42 +51,37 @@ h2 {
 
 .card-back {
   transform: rotateY(180deg);
-  /* background: linear-gradient(180deg, #858691, #c2aef0); */
-  background: rgb(180, 180, 180);
+  background: #f1f1f1;
   color: #1b357e;
   text-align: left;
-  
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* divide em blocos verticais */
+  justify-content: space-between;
   align-items: flex-start;
-  padding: 1.5rem; /* margem interna */
-  gap: 1rem; /* espaçamento entre os textos */
+  padding: 1.5rem;
+  gap: 1rem;
 }
 
 .card-back h3 {
-  margin: 0 0 0.5rem 0;
   font-size: 1.2rem;
   font-weight: bold;
-  align-self: center; /* centraliza o título no topo */
+  align-self: center;
+  margin: 0 0 0.5rem;
 }
 
 .card-back p {
-  margin: 0;
   font-size: 0.95rem;
-  line-height: 1.4;
   width: 100%;
   padding: 0.4rem 0.6rem;
-  background: rgba(255,255,255,0.3);
+  margin: 0;
+  line-height: 1.4;
+  background: rgba(27, 53, 126, 0.1);
   border-radius: 6px;
 }
 
 .card-back .btn-exhibition {
-  align-self: center; /* botão no fim, centralizado */
+  align-self: center;
   margin-top: auto;
   width: 100%;
 }
-
 
 /* Flip Effect */
 .card.flipped .card-front {
@@ -121,25 +117,65 @@ h2 {
 .btn-exhibition:hover {
   cursor: pointer;
   background-color: #2f71f5;
-  color: #ffffff;
 }
 
 /* ======== Responsividade ======== */
+
+/* Tablets grandes (até 1024px) */
 @media (max-width: 1024px) {
-  h2 { margin-left: 2rem; font-size: 1.5rem; }
-  .card { max-width: 280px; height: 380px; }
-  .img { height: 180px; }
+  h2 {
+    margin-left: 2rem;
+    font-size: 1.6rem;
+    text-align: left;
+  }
+  .card {
+    max-width: 280px;
+    height: 380px;
+  }
+  .img {
+    height: 180px;
+  }
 }
 
+/* Tablets pequenos / celulares grandes (até 768px) */
 @media (max-width: 768px) {
-  h2 { margin-left: 0; text-align: center; font-size: 1.3rem; }
-  .card { max-width: 260px; height: 360px; }
-  .img { height: 160px; }
+  h2 {
+    margin-left: 0;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+  .maisPopulares, .maisVendidos {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    padding: 2rem 1rem;
+  }
+  .card {
+    max-width: 260px;
+    height: 360px;
+  }
+  .img {
+    height: 160px;
+  }
 }
 
+/* Celulares pequenos (até 480px) */
 @media (max-width: 480px) {
-  h2 { font-size: 1.1rem; }
-  .card { max-width: 240px; height: 320px; }
-  .img { height: 140px; }
-  .btn-exhibition { height: 2.2rem; font-size: 0.9rem; }
+  h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  .card {
+    max-width: 230px;
+    height: 320px;
+  }
+  .img {
+    height: 140px;
+  }
+  .btn-exhibition {
+    height: 2.2rem;
+    font-size: 0.9rem;
+  }
+  .card-back p {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.5rem;
+  }
 }

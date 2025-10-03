@@ -18,11 +18,10 @@
         <!-- Verso -->
         <div class="card-back">
           <h3>{{ carro.modelo }}</h3>
-          <p><b>Ano:</b> {{ carro.ano }}</p>
-          <p><b>Motor:</b> {{ carro.tipoMotor }}</p>
-          <p><b>Câmbio:</b> {{ carro.cambio }}</p>
-          <p><b>Combustível:</b> {{ carro.combustivel }}</p>
-          <p><b>Carroceria:</b> {{ carro.carroceria }}</p>
+          <p><b>{{ 'EXHIBITION.ANO' | translate }}:</b> {{ carro.ano }}</p>
+          <p><b>{{ 'EXHIBITION.MOTOR' | translate }}:</b> {{ carro.tipoMotor }}</p>
+          <p><b>{{ 'EXHIBITION.COMBUSTIVEL' | translate }}:</b> {{ carro.combustivel }}</p>
+          <p><b>{{ 'EXHIBITION.CARROCERIA' | translate }}:</b> {{ carro.carroceria }}</p>
           <button class="btn-exhibition" (click)="flipCard(null)">
             {{ 'EXHIBITION.BTNVOLTAR' | translate }}
           </button>

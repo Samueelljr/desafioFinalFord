@@ -63,7 +63,12 @@
       "MAISPOPULARES": "Most Popular",
       "MAISVENDIDOS": "Best Sellers",
       "BTNDETALHES": "View Details",
-      "BTNVOLTAR": "Back"
+      "BTNVOLTAR": "Back",
+      "ANO": "Year",
+      "MOTOR": "Engine",
+      "CAMBIO": "Gearbox",
+      "COMBUSTIVEL": "Combustible",
+      "CARROCERIA": "Bodywork"
     },
     "MODALINFORMATION": {
   "ANO": "Year",

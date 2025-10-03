@@ -5,7 +5,7 @@ import { ExhibitionCarsComponent } from "../../components/exhibition-cars/exhibi
 import { ServicosComponent } from "../../components/services/services.component";
 import { ContactComponent } from "../../components/contact/contact.component";
 import { FooterComponent } from "../../components/footer/footer.component";
-import { RouterLink, RouterOutlet } from '@angular/router';
+
 
 @Component({
   selector: 'app-home',

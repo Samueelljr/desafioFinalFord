@@ -63,7 +63,12 @@
       "MAISPOPULARES": "Más populares",
       "MAISVENDIDOS": "Más vendidos",
       "BTNDETALHES": "Ver detalles",
-      "BTNVOLTAR": "Volver"
+      "BTNVOLTAR": "Volver",
+      "ANO": "Año",
+      "MOTOR": "Motor",
+      "CAMBIO": "Intercambio",
+      "COMBUSTIVEL": "Combustible",
+      "CARROCERIA": "Cuerpo"
     },
     "MODALINFORMATION": {
       "ANO": "Año",

@@ -98,6 +98,13 @@ header li:hover {
 .btn-dropdown {
   display: flex;
   gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+
+  div {
+    display: flex;
+    gap: 1rem;
+  }
 }
 
 .dropdown-container {
