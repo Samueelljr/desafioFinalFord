@@ -49,7 +49,6 @@ export class ModalRegisterComponent {
       alert('Você deve aceitar os termos antes de prosseguir.');
       return;
     }
-    // aqui segue o cadastro
   };
 
 

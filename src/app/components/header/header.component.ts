@@ -9,7 +9,7 @@ import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-header',
-  standalone: true, // Use standalone: true se seu projeto for standalone
+  standalone: true,
   imports: [
     CommonModule,
     TranslateModule,
@@ -19,19 +19,19 @@ import { Subscription } from 'rxjs';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-// Adicionado "implements OnInit, OnDestroy" para seguir as boas práticas
+
 export class HeaderComponent implements OnInit, OnDestroy {
   isOpen = false;
   nomeUsuario: string | null = null;
   isLoged = false;
-  noLoged = true; // Valor inicial correto
+  noLoged = true; 
   openLanguage = false;
   isDarkMode = false;
   selectedLanguage = 'pt';
   isScrolled = false;
   innerWidth = window.innerWidth;
 
-  // 👇 AQUI ESTÁ A CORREÇÃO PRINCIPAL: APENAS AS DUAS VARIÁVEIS NECESSÁRIAS 👇
+
   private unsubscribeAuthChange: (() => void) | null = null;
   private subscription: Subscription | null = null;
 
@@ -83,7 +83,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
     }
   }
 
-  // --- O restante do seu código permanece igual ---
 
   @HostListener('window:scroll', [])
   onWindowScroll() {

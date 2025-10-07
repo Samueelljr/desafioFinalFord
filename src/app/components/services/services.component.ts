@@ -82,7 +82,7 @@ export class ServicosComponent implements OnInit, OnDestroy {
 
     const userr = await this.authService.getCurrentUser();
   if (!userr) {
-    this.openLogin(); // abre modal e para aqui
+    this.openLogin(); 
     return;
   }
 
