@@ -53,6 +53,8 @@ export class AuthService {
 
   // LOGOUT
   logout() {
+    sessionStorage.removeItem('isAdmin');
+    localStorage.removeItem('isAdmin');
     return this.auth.signOut();
   }
 

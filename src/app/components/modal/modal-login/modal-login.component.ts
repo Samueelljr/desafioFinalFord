@@ -28,9 +28,10 @@ constructor(private authService: AuthService,
   open() { this.visible = true; }
   close() { this.visible = false; }
 login() {
+   sessionStorage.removeItem('isAdmin');
   // checagem do admin
   if (this.email === 'admin' && this.password === 'admin') {
-    localStorage.setItem('isAdmin', 'true'); // flag simples
+    sessionStorage.setItem('isAdmin', 'true'); 
     this.router.navigate(['/dashboard']); // redireciona
     return;
   }
